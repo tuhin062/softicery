@@ -178,7 +178,16 @@ body {
         font-size: 1.8rem;
     }
 }
+/* Hide hamburger button on larger screens (Desktop view) */
+.hamburger-icon {
+    display: block;
+}
 
+@media (min-width: 768px) {
+    .hamburger-icon {
+        display: none;  /* Hide hamburger button on desktop */
+    }
+}
 
 /* Hero Banner Section */
 .banner-483726 {
@@ -365,14 +374,11 @@ body {
 
 /* Card Styles */
 .flavour-card {
-	border: none;
-	/* Remove card border */
-	border-radius: 10px;
-	/* Rounded corners */
-	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-	/* Soft shadow for cards */
-	transition: transform 0.3s ease-in-out;
-	/* Smooth transition for hover effect */
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    padding: 0; /* Remove padding from the card */
 }
 
 .flavour-card:hover {
@@ -382,27 +388,24 @@ body {
 
 /* Card Image */
 .flavour-card-img-top {
-	height: 277px;
-	object-fit: cover;
-	/* Ensure image covers the space properly */
-	border-radius: 10px 10px 0 0;
-	/* Rounded top corners */
+    width: 100%;  /* Stretch image to full width */
+    height: auto; /* Let height adjust based on the aspect ratio */
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
 }
 
 /* Card Body */
 .flavour-card-body {
-	padding: 1.5rem;
+	padding: 2rem 1.5rem;
 }
 
 .flavour-card-title {
     margin: 15px 0 12px;
-    padding: 0;
     color: #373547;
     font-family: "Lato", Sans-serif;
     font-size: 30px;
     font-weight: 700;
     line-height: 1.2em;
-    letter-spacing: 0px;
 }
 
 .flavour-card-text {
@@ -410,8 +413,6 @@ body {
     font-size: 14px;
     font-weight: 700;
     line-height: 1.1em;
-    letter-spacing: 0px;
-    word-spacing: 0em;
     color: #F35F65;
     padding: 1rem;
 }
@@ -979,13 +980,13 @@ body {
 
     /* Adjust Image Sizing */
     .flavour-card-img-top {
-        height: 220px; /* Reduce height for better aspect ratio */
-        object-fit: cover;
+        width: 100%;  /* Ensure image takes full width of card */
+        height: auto;  /* Maintain aspect ratio */
     }
 
     /* Optimize Card Body Padding */
     .flavour-card-body {
-        padding: 1rem;
+        padding: 1.5rem 1rem; /* Add sufficient padding for mobile */
     }
 
     /* Adjust Title Font Size */

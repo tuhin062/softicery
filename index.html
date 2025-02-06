@@ -138,7 +138,7 @@
          </div>
       </section>
       <!-- New Section: Our Flavours -->
-      <section class="flavours-section py-5" id="flavours">
+      <section class="flavours-section py-5" id="ourflavours">
          <div class="container">
             <h2 class="flavours-section-heading">Our Flavours</h2>
             <!-- Cards Row -->
@@ -306,7 +306,7 @@
             <div class="bottom-footer-container">
                <!-- Left Aligned Copyright -->
                <div class="copyright">
-                  &copy; Kahhak Softicery || All Rights Reserved by <a href="https://www.kahhak.com" class="footer-link">Kahhak Industries Private Limited</a>.
+                  &copy; Kahhak Softicery || All Rights Reserved by <a href="https://www.kahhak.com" class="footer-link">Kahhak Industries Private Limited</a>
                </div>
                <!-- Right Aligned Links -->
                <ul class="footer-links">
@@ -321,35 +321,45 @@
       <!-- Custom JS -->
       <script src="script.js"></script>
       
-<script>
-    // Get elements
-const hamburgerIcon = document.getElementById('hamburger-icon');
-const mobileNav = document.getElementById('mobile-nav');
-const body = document.body;
-
-// Toggle the mobile navigation menu on click
-hamburgerIcon.addEventListener('click', () => {
-    mobileNav.classList.toggle('active');
-    body.classList.toggle('no-scroll');  // Optional: Prevent scrolling when menu is open
-});
-
-// Close the mobile menu if clicking outside of it
-document.addEventListener('click', (event) => {
-    if (!mobileNav.contains(event.target) && !hamburgerIcon.contains(event.target)) {
-        mobileNav.classList.remove('active');
-        body.classList.remove('no-scroll');
-    }
-});
-
-// Close the mobile menu if the close button is clicked
-const closeBtn = document.getElementById('close-btn');
-if (closeBtn) {
-    closeBtn.addEventListener('click', () => {
-        mobileNav.classList.remove('active');
-        body.classList.remove('no-scroll');
-    });
-}
-</script>
+      <script>
+        // Get elements
+        const hamburgerIcon = document.getElementById('hamburger-icon');
+        const mobileNav = document.getElementById('mobile-nav');
+        const body = document.body;
+    
+        // Toggle the mobile navigation menu on click
+        hamburgerIcon.addEventListener('click', () => {
+            mobileNav.classList.toggle('active');
+            body.classList.toggle('no-scroll');  // Optional: Prevent scrolling when menu is open
+        });
+    
+        // Close the mobile menu if clicking outside of it
+        document.addEventListener('click', (event) => {
+            if (!mobileNav.contains(event.target) && !hamburgerIcon.contains(event.target)) {
+                mobileNav.classList.remove('active');
+                body.classList.remove('no-scroll');
+            }
+        });
+    
+        // Close the mobile menu if the close button is clicked
+        const closeBtn = document.getElementById('close-btn');
+        if (closeBtn) {
+            closeBtn.addEventListener('click', () => {
+                mobileNav.classList.remove('active');
+                body.classList.remove('no-scroll');
+            });
+        }
+    
+        // Close the mobile menu when any link inside the mobile nav is clicked
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav .list-374612 li a');
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileNav.classList.remove('active');
+                body.classList.remove('no-scroll');
+            });
+        });
+    </script>
+    
       <!-- Include Owl Carousel JS (inside <head>) -->
       <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/owl.carousel.min.js"></script>
