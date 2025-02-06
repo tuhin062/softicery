@@ -27,28 +27,47 @@
       <link rel="stylesheet" href="styles.css">
    </head>
    <body>
-      <header class="sticky-834291">
-         <div class="container-129384">
+    <header class="sticky-834291">
+        <div class="container-129384">
             <div class="header-981273">
-               <!-- Left: Brand Logo -->
-               <div class="logo-745612">
-                  <a href="#">
-                  <img src="assets/pictures/Softicery.png" alt="Brand Logo">
-                  </a>
-               </div>
-               <!-- Right: Navigation Menu -->
-               <nav class="nav-512834">
-                  <ul class="list-374612">
-                     <li><a href="#">Home</a></li>
-                     <li><a href="#ourflavours">Our Flavours</a></li>
-                     <li><a href="#">Services</a></li>
-                     <li><a href="#">Menu</a></li>
-                     <li><a href="#">Contact</a></li>
-                  </ul>
-               </nav>
+                <!-- Left: Brand Logo -->
+                <div class="logo-745612">
+                    <a href="#">
+                        <img src="assets/pictures/Softicery.png" alt="Brand Logo">
+                    </a>
+                </div>
+                <!-- Right: Navigation Menu (Desktop) -->
+                <nav class="nav-512834">
+                    <ul class="list-374612">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#ourflavours">Our Flavours</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Menu</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+                <!-- Mobile Menu Button (Hamburger Icon) -->
+                <div class="hamburger-icon" id="hamburger-icon">
+                    <i class="fas fa-bars"></i>
+                </div>
             </div>
-         </div>
-      </header>
+        </div>
+      
+        <!-- Mobile Navigation Menu (Initially Hidden) -->
+        <nav class="mobile-nav" id="mobile-nav">
+            <ul class="list-374612">
+                <li><a href="#">Home</a></li>
+                <li><a href="#ourflavours">Our Flavours</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <!-- Inside .mobile-nav -->
+            <button class="close-btn" id="close-btn">X</button>
+        </nav>
+    </header>
+    
+     
       <section class="banner-483726 container-fluid">
          <div class="row g-0 align-items-center">
             <!-- Left Column -->
@@ -301,6 +320,36 @@
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
       <!-- Custom JS -->
       <script src="script.js"></script>
+      
+<script>
+    // Get elements
+const hamburgerIcon = document.getElementById('hamburger-icon');
+const mobileNav = document.getElementById('mobile-nav');
+const body = document.body;
+
+// Toggle the mobile navigation menu on click
+hamburgerIcon.addEventListener('click', () => {
+    mobileNav.classList.toggle('active');
+    body.classList.toggle('no-scroll');  // Optional: Prevent scrolling when menu is open
+});
+
+// Close the mobile menu if clicking outside of it
+document.addEventListener('click', (event) => {
+    if (!mobileNav.contains(event.target) && !hamburgerIcon.contains(event.target)) {
+        mobileNav.classList.remove('active');
+        body.classList.remove('no-scroll');
+    }
+});
+
+// Close the mobile menu if the close button is clicked
+const closeBtn = document.getElementById('close-btn');
+if (closeBtn) {
+    closeBtn.addEventListener('click', () => {
+        mobileNav.classList.remove('active');
+        body.classList.remove('no-scroll');
+    });
+}
+</script>
       <!-- Include Owl Carousel JS (inside <head>) -->
       <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/owl.carousel.min.js"></script>
