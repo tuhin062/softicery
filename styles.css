@@ -1230,7 +1230,7 @@ body {
     
     /* Header & Navigation */
     .navbar {
-        padding: 1rem 2rem;
+        padding: 0.5rem 3rem;
     }
     
     .navbar .menu {
@@ -1260,7 +1260,9 @@ body {
     .hero-section .btn {
         padding: 0.8rem 1.5rem;
     }
-
+    .right-573812 {
+        margin-top: 150px !important;
+    }
     /* Services Section */
     .services-container {
         grid-template-columns: repeat(2, 1fr); /* 2 columns for better spacing */
