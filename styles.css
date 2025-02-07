@@ -337,11 +337,8 @@ body {
 
 /* Section Heading */
 .flavours-section .flavours-section-heading {
-	/* Use your theme color */
 	margin-bottom: 2rem;
-	/* Space below the heading */
 	text-align: center;
-
 	font-family: "Lato", Sans-serif;
 	font-size: 88px;
 	font-weight: 900;
@@ -918,9 +915,9 @@ body {
 	}
 
 	.choose-us-section .section-title {
-		font-size: 36px;
-		/* Adjusted for better readability */
-		margin-bottom: 40px;
+        font-size: 42px;
+        line-height: 1.1em;
+        margin-bottom: 1.5rem;
 	}
 
 	.owl-carousel {
@@ -1247,6 +1244,7 @@ body {
     .hero-section {
         padding: 3rem 2rem;
         text-align: center;
+        height: 60vh !important;
     }
 
     .hero-section h1 {
@@ -1261,7 +1259,7 @@ body {
         padding: 0.8rem 1.5rem;
     }
     .right-573812 {
-        margin-top: 150px !important;
+        margin-top: 60px !important;
     }
     /* Services Section */
     .services-container {
