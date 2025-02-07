@@ -6,6 +6,7 @@ body {
 	overflow: hidden;
 	/* Hide the scrollbars */
 	font-family: "DM Sans", serif;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -397,136 +398,121 @@ body {
 }
 
 
-/* New Section Styles */
+/* Flavour Showcase Section */
 .flavour-showcase-section {
-	position: relative;
-	/* Allow absolute positioning of the children */
-	padding: 3rem 0;
-	min-height: 400px;
-	/* Ensure the section has a minimum height */
+    position: relative;
+    padding: 3rem 0;
+    min-height: 400px;
 }
 
-/* Heading Section */
+/* Heading */
 .flavour-section-heading-container {
-	z-index: 2;
-	/* Place the heading above the gradient */
-	position: relative;
-	margin-bottom: 2rem;
-	/* Space below the heading */
+    z-index: 2;
+    position: relative;
+    margin-bottom: 2rem;
 }
 
 .flavour-section-heading {
-	text-align: left;
-	font-family: "Lato", Sans-serif;
-	font-size: 88px;
-	font-weight: 900;
-	line-height: 1.2em;
-	letter-spacing: 0px;
-	word-spacing: 0em;
-	color: #373547;
-	padding: 40px 50px;
+    text-align: left;
+    font-family: "Lato", Sans-serif;
+    font-size: 88px;
+    font-weight: 900;
+    line-height: 1.2em;
+    color: #373547;
+    padding: 40px 50px;
 }
 
-/* Image Section */
-.flavour-image-container {
-	z-index: 3;
-	/* The image goes above the gradient but under the heading */
-	position: relative;
-	text-align: center;
+/* Video Section */
+.flavour-video-container {
+    z-index: 3;
+    position: relative;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white; /* Ensures the white background */
+    padding: 10px;
+    border-radius: 10px;
+    overflow: hidden; /* Prevents unwanted cropping */
 }
 
-.flavour-image {
-	width: 92%;
-	max-width: 100%;
-	/* Max size for the image */
-	height: auto;
-	border-radius: 10px;
-	/* Optional rounded corners */
-	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-	/* Add subtle shadow for the image */
+/* Video Styling */
+.flavour-video {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    object-fit: contain; /* Ensures full video visibility */
+    background-color: white !important; /* Forces white background */
 }
 
-/* Gradient Background Section */
+/* Gradient Background */
 .flavour-gradient-background {
-	z-index: 1;
-	/* This div stays behind the image */
-	position: absolute;
-	bottom: 0;
-	/* Position at the bottom of the section */
-	left: 0;
-	width: 100%;
-	height: 50%;
-	/* The gradient occupies the bottom 50% of the section */
-	background: linear-gradient(90deg, #78C05B 5%, #FB61660D 0%);
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(90deg, #78C05B 5%, #FB61660D 0%);
 }
 
-/* Review Section Container */
+/* Review Section */
 .flavour-section-review-container {
-	padding: 5rem 5rem;
+    padding: 5rem 5rem;
 }
 
-/* Flexbox Layout for Review Section */
+/* Flexbox Layout */
 .flavour-review-flexbox {
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
-	max-width: 1200px;
-	margin: 0 auto;
-	/* Center the content */
-	gap: 1.5rem;
-	/* Space between the reviewer logo and text */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 1.5rem;
 }
 
-/* Left Flexbox: Reviewer Logo */
+/* Reviewer Logo */
 .flavour-reviewer-logo {
-	flex: 0 0 auto;
-	/* Prevent shrinking or growing */
-	max-width: 120px;
-	/* Ensure the logo has a fixed width */
+    flex: 0 0 auto;
+    max-width: 120px;
 }
 
 .flavour-review-logo-img {
-	width: 100%;
-	height: auto;
-	border-radius: 50%;
-	/* Make logo circular */
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
 }
 
-/* Right Flexbox: Review Text, Stars, and Name */
+/* Review Text */
 .flavour-reviewer-text {
-	flex: 1;
-	/* Take up the remaining space */
-	text-align: left;
-	padding-left: 1rem;
-	/* Space between the logo and text */
+    flex: 1;
+    text-align: left;
+    padding-left: 1rem;
 }
 
 .flavour-review-text {
-	font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-	font-size: 2em;
-	line-height: 1.4;
-	text-transform: none;
-	padding-right: 250px;
-	margin-bottom: 2rem;
+    font-family: "Open Sans", sans-serif;
+    font-size: 2em;
+    line-height: 1.4;
+    padding-right: 250px;
+    margin-bottom: 2rem;
 }
 
-/* Stars Rating (Div containing the stars) */
+/* Stars Rating */
 .flavour-stars-rating {
-	font-size: 1rem;
-	color: #FFB400;
-	/* Gold color for the stars */
-	margin-bottom: 0.5rem;
-	/* Space between stars and reviewer name */
+    font-size: 1rem;
+    color: #FFB400;
+    margin-bottom: 0.5rem;
 }
 
 /* Reviewer Name */
 .flavour-reviewer-name {
-	font-size: 1.5rem;
-	font-weight: bold;
-	color: #ED2433;
-	/* To match your theme color */
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ED2433;
 }
-
 
 /* Instagram Section Styles */
 .instagram-showcase {
@@ -1009,71 +995,47 @@ body {
 		padding: 0.8rem;
 	}
 
-	/* Reduce padding and adjust section layout */
-	.flavour-showcase-section {
-		padding: 2rem 0;
-		min-height: auto;
-	}
-
-	/* Optimize heading for smaller screens */
 	.flavour-section-heading {
-		font-size: 2.5rem;
-		/* Scales down from 88px */
-		text-align: center;
-		padding: 20px;
-		line-height: 1.3;
-	}
+        font-size: 48px;
+        text-align: center;
+        padding: 20px;
+    }
 
-	/* Adjust image size */
-	.flavour-image-container {
-		text-align: center;
-	}
+    .flavour-video-container {
+        padding: 0;
+    }
 
-	.flavour-image {
-		width: 100%;
-		border-radius: 5px;
-	}
+    .flavour-video {
+        width: 100%;
+        border-radius: 5px;
+    }
 
-	/* Modify gradient background for a better effect */
-	.flavour-gradient-background {
-		height: 30%;
-		/* Reduce height */
-	}
+    .flavour-section-review-container {
+        padding: 2rem 1rem;
+    }
 
-	/* Optimize Review Section */
-	.flavour-section-review-container {
-		padding: 2rem;
-	}
+    .flavour-review-flexbox {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
 
-	.flavour-review-flexbox {
-		flex-direction: column;
-		text-align: center;
-		gap: 1rem;
-	}
+    .flavour-review-logo-img {
+        max-width: 80px;
+    }
 
-	/* Adjust reviewer logo */
-	.flavour-reviewer-logo {
-		max-width: 80px;
-		/* Reduce size */
-	}
+    .flavour-review-text {
+        font-size: 1.4em;
+        padding: 0 10px;
+    }
 
-	/* Improve readability of review text */
-	.flavour-review-text {
-		font-size: 1.2rem;
-		padding-right: 0;
-		margin-bottom: 1rem;
-	}
+    .flavour-stars-rating {
+        font-size: 0.9rem;
+    }
 
-	/* Scale stars and adjust spacing */
-	.flavour-stars-rating {
-		font-size: 1rem;
-		margin-bottom: 0.3rem;
-	}
-
-	/* Adjust reviewer name */
-	.flavour-reviewer-name {
-		font-size: 1.2rem;
-	}
+    .flavour-reviewer-name {
+        font-size: 1.2rem;
+    }
 
 	.instagram-showcase {
 		padding: 3rem 1rem;
@@ -1306,6 +1268,40 @@ body {
 
     .footer .social-icons {
         justify-content: center;
+    }
+
+
+    .flavour-section-heading {
+        font-size: 64px;
+        text-align: center;
+        padding: 30px;
+    }
+
+    .flavour-video-container {
+        padding: 5px;
+    }
+
+    .flavour-video {
+        width: 100%;
+    }
+
+    .flavour-section-review-container {
+        padding: 3rem 2rem;
+    }
+
+    .flavour-review-flexbox {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .flavour-reviewer-text {
+        padding-left: 0;
+    }
+
+    .flavour-review-text {
+        font-size: 1.8em;
+        padding-right: 0;
     }
 
 }
