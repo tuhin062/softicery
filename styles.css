@@ -1244,7 +1244,6 @@ body {
     .hero-section {
         padding: 3rem 2rem;
         text-align: center;
-        height: 90vh !important;
     }
 
     .hero-section h1 {
@@ -1258,6 +1257,10 @@ body {
     .hero-section .btn {
         padding: 0.8rem 1.5rem;
     }
+    .banner-483726 {
+        height: 60vh;
+    }
+
     .right-573812 {
         margin-top: 60px !important;
     }
