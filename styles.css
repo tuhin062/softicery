@@ -62,7 +62,7 @@ body {
 
 /* Logo */
 .logo-745612 img {
-	max-height: 50px;
+	max-height: 58px;
 }
 
 /* Desktop Navigation Menu */
@@ -1321,7 +1321,7 @@ body {
 
 /* Active State Styles */
 .nav-512834 ul li a.active {
-    color: #F55F65; /* Highlight color */
+    color: #96e377; /* Highlight color */
     font-weight: 600;
     position: relative;
 }
@@ -1334,14 +1334,14 @@ body {
     bottom: -5px;
     width: 50%;
     height: 2px;
-    background: #F55F65;
+    background: #96e377;
     transform: translateX(-50%);
     transition: width 0.3s ease-in-out;
 }
 
 /* Mobile Menu Active State */
 .mobile-nav ul li a.active {
-    color: #ED2433;
+    color: #96e377;
     font-weight: 600;
 }
 
