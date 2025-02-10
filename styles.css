@@ -1305,3 +1305,48 @@ body {
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Active State Styles */
+.nav-512834 ul li a.active {
+    color: #F55F65; /* Highlight color */
+    font-weight: 600;
+    position: relative;
+}
+
+/* Active Indicator (Underline Effect) */
+.nav-512834 ul li a.active::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    width: 50%;
+    height: 2px;
+    background: #F55F65;
+    transform: translateX(-50%);
+    transition: width 0.3s ease-in-out;
+}
+
+/* Mobile Menu Active State */
+.mobile-nav ul li a.active {
+    color: #ED2433;
+    font-weight: 600;
+}
+
+/* Fix for sections not triggering active state correctly */
+section {
+    scroll-margin-top: 100px; /* Prevents section from being hidden under sticky header */
+    min-height: 10vh; /* Ensures sections are large enough for IntersectionObserver */
+}
