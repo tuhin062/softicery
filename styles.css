@@ -970,6 +970,7 @@ body {
         justify-content: center;
         padding-top: 0; /* Remove top padding */
         text-align: center; /* Center-align text */
+		padding-top: 50px;
     }
 
     /* Left Column - Text Styling */
