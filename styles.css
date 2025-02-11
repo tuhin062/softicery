@@ -5,7 +5,8 @@ body {
 	/* Ensure body takes full height */
 	overflow: hidden;
 	/* Hide the scrollbars */
-	font-family: "DM Sans", serif;
+	/* font-family: "DM Sans", serif; */
+	font-family: 'Segoe Script', sans-serif;
     scroll-behavior: smooth;
 }
 
