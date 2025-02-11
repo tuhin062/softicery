@@ -1311,95 +1311,30 @@ body {
         font-size: 1rem;
     }
 
-/* Hero Banner Section */
+ /* Hero Section */
+ .hero-section {
+	padding: 3rem 2rem;
+	text-align: center;
+}
+
+.hero-section h1 {
+	font-size: 2rem;
+}
+
+.hero-section p {
+	font-size: 1.2rem;
+}
+
+.hero-section .btn {
+	padding: 0.8rem 1.5rem;
+}
 .banner-483726 {
-	height: auto;
-	padding: 4rem 5rem;
-	background-size: 60% auto;
-	background-position: center top;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	text-align: center;
+	height: 60vh;
 }
 
-/* Left Column - Text Styling */
-.left-827364 {
-	margin-top: 30px;
-	text-align: center;
-}
-
-.left-827364 h1 {
-	font-size: 85px;
-	line-height: 1.1;
-}
-
-.left-827364 h2 {
-	font-size: 80px;
-	line-height: 1.1;
-}
-
-.left-827364 p {
-	font-size: 22px;
-	line-height: 1.4;
-	max-width: 80%;
-	margin: 0 auto;
-}
-
-/* Right Column - Image Container */
 .right-573812 {
-	width: 400px;
-	height: 400px;
-	margin-top: 50px;
-	border-radius: 50%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+	margin-top: 60px !important;
 }
-
-/* Floating Images */
-.float-981273 {
-	width: 85%;
-	height: auto;
-}
-
-/* Image 1 */
-.img-267845 {
-	top: 4%;
-	left: 8%;
-	width: 160px;
-	height: 320px;
-	transform: rotate(-6deg);
-}
-
-/* Image 2 */
-.img-745129 {
-	bottom: 4%;
-	right: 8%;
-	width: 250px;
-	height: 400px;
-	transform: rotate(7deg);
-}
-
-/* Floating Background SVGs */
-.floating-svg {
-	width: 60px;
-	opacity: 0.8;
-}
-
-.floating-svg.svg-5 {
-	width: 100px !important;
-}
-
-/* Individual SVG Positioning */
-.svg-1 { top: 18%; left: 6%; }
-.svg-2 { top: 22%; right: 6%; }
-.svg-3 { bottom: 4%; left: 6%; }
-.svg-4 { bottom: 6%; right: 40%; }
-.svg-5 { bottom: 5%; right: 6%; }
-
 
     /* Services Section */
     .services-container {
