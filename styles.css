@@ -176,88 +176,99 @@ body {
 
 /* Hero Banner Section */
 .banner-483726 {
-	background-color: #FFFFFF;
-	background-image: url('https://static.live.templately.com/woocommerce/2022/11/43c0fc8e-es-hero-bg.png');
-	background-position: center right;
-	background-repeat: no-repeat;
-	background-size: 40% auto;
-	padding: 5rem 12rem;
-	height: 100vh;
-	display: flex;
-	align-items: center;
+    background-color: #FFFFFF;
+    background-image: url('https://static.live.templately.com/woocommerce/2022/11/43c0fc8e-es-hero-bg.png');
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: 40% auto;
+    padding: 5rem 12rem;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center content horizontally */
+}
+
+/* Flexbox Wrapper */
+.banner-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+	padding-top: 90px;
 }
 
 /* Left Column - Text Styling */
 .left-827364 {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	color: #373547;
-	margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #373547;
+    flex: 1; /* Makes sure it takes half the space */
 }
 
 .left-827364 h1,
 .left-827364 h2 {
-
-	font-family: "Lato", Sans-serif;
-	font-size: 102px;
-	font-weight: 800;
-	line-height: 1.1em;
-	letter-spacing: 0px;
-	word-spacing: 0em;
-	color: #373547;
+    font-family: "Lato", Sans-serif;
+    font-size: 102px;
+    font-weight: 800;
+    line-height: 1.1em;
+    letter-spacing: 0px;
+    word-spacing: 0em;
+    color: #373547;
 }
 
 .left-827364 p {
-	font-family: "DM Sans", Sans-serif;
-	font-size: 24px;
-	font-weight: 500;
-	line-height: 1.2em;
-	letter-spacing: 0px;
-	word-spacing: 0em;
-	color: #949BB0;
+    font-family: "DM Sans", Sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.2em;
+    letter-spacing: 0px;
+    word-spacing: 0em;
+    color: #949BB0;
 }
 
 /* Right Column - Image Container */
 .right-573812 {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background-image: linear-gradient(180deg, #FFEAEB 0%, #F67275 100%);
-	border-radius: 50%;
-	width: 500px;
-	height: 500px;
-	margin: auto;
-	position: relative;
-	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-	margin-top: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(180deg, #FFEAEB 0%, #F67275 100%);
+    border-radius: 50%;
+    width: 500px;
+    height: 500px;
+    position: relative;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    flex: 1; /* Makes sure it takes half the space */
+    max-width: 500px;
 }
 
 /* Floating Images */
 .float-981273 {
-	position: absolute;
-	transition: transform 0.3s ease-out;
+    position: absolute;
+    transition: transform 0.3s ease-out;
 }
 
 /* Image 1 */
 .img-267845 {
-	top: 5%;
-	left: 10%;
-	width: 200px;
-	height: 390px;
-	transform: rotate(-7deg);
-	z-index: 2;
+    top: 5%;
+    left: 10%;
+    width: 200px;
+    height: 390px;
+    transform: rotate(-7deg);
+    z-index: 2;
 }
 
 /* Image 2 */
 .img-745129 {
-	bottom: 5%;
-	right: 6%;
-	width: 320px;
-	height: 500px;
-	transform: rotate(10deg);
-	z-index: 2;
+    bottom: 5%;
+    right: 6%;
+    width: 320px;
+    height: 500px;
+    transform: rotate(10deg);
+    z-index: 2;
 }
+
 /* Ensure parent section contains the floating elements */
 .banner-483726 {
     position: relative; /* Important: Keeps SVGs inside this section */
@@ -273,8 +284,9 @@ body {
     transition: transform 0.3s ease-out;
     z-index: 0; /* Keeps them behind other content */
 }
+
 /* Floating Background SVGs */
-.floating-svg.svg-5{
+.floating-svg.svg-5 {
     width: 130px !important;
 }
 
@@ -284,6 +296,7 @@ body {
 .svg-3 { bottom: 1%; left: 2%; }
 .svg-4 { bottom: 5%; right: 46%; }
 .svg-5 { bottom: 4%; right: 2%; }
+
 
 
 /* Container for the entire section */
@@ -918,91 +931,108 @@ body {
 		font-size: 1.8rem;
 	}
 
- /* Hero Banner Section */
- .banner-483726 {
-	background-size: cover;
-	background-position: center;
-	padding: 2rem 1rem;
-	height: auto;
-	text-align: center;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	overflow: hidden;
-}
+    /* Hero Banner Section */
+    .banner-483726 {
+        background-size: cover;
+        background-position: left;
+        padding: 2rem 1rem;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        overflow: hidden;
+    }
 
-/* Left Column - Text */
-.left-827364 {
-	margin-top: 30px;
-	text-align: center;
-}
+    /* Flexbox Wrapper */
+    .banner-wrapper {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 50px;
+        gap: 20px;
+    }
 
-.left-827364 h1 {
-	font-size: 50px;
-	line-height: 1.2em;
-}
+    /* Hero Banner Section */
+    .banner-483726 {
+        padding: 2rem 1rem; /* Reduce padding for smaller screens */
+        height: auto; /* Remove fixed height */
+        min-height: 100vh; /* Ensure it takes at least the full viewport height */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
-.left-827364 h2 {
-	font-size: 48px;
-	line-height: 1.2em;
-}
+    /* Flexbox Wrapper */
+    .banner-wrapper {
+        flex-direction: column; /* Stack columns vertically */
+        align-items: center;
+        justify-content: center;
+        padding-top: 0; /* Remove top padding */
+        text-align: center; /* Center-align text */
+    }
 
-.left-827364 p {
-	font-size: 16px;
-	line-height: 1.4em;
-	margin-top: 1rem;
-	padding-left: 0px;
-}
+    /* Left Column - Text Styling */
+    .left-827364 {
+        order: 2; /* Move text below images */
+        margin-top: 2rem; /* Add spacing between columns */
+        flex: none; /* Reset flex for mobile */
+    }
 
-/* Right Column - Image Container */
-.right-573812 {
-	width: 280px;
-	height: 280px;
-	margin-top: 20px;
-	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-}
+    .left-827364 h1,
+    .left-827364 h2 {
+        font-size: 48px; /* Reduce font size for mobile */
+        line-height: 1.2em; /* Adjust line height */
+		color: white;
+    }
 
-/* Floating Images */
-.float-981273 {
-	width: 85%;
-	height: auto;
-}
+    .left-827364 p {
+        font-size: 18px; /* Reduce font size for mobile */
+        margin-top: 0.5rem; /* Add spacing */
+		color: white;
+    }
 
-/* Image 1 */
-.img-267845 {
-	top: 2%;
-	left: 6%;
-	width: 110px;
-	height: 220px;
-	transform: rotate(-5deg);
-}
+    /* Right Column - Image Container */
+    .right-573812 {
+        width: 300px; /* Reduce size for mobile */
+        height: 300px;
+        margin: 0 auto; /* Center the circle */
+        flex: none; /* Reset flex for mobile */
+    }
 
-/* Image 2 */
-.img-745129 {
-	bottom: 2%;
-	right: 6%;
-	width: 180px;
-	height: 280px;
-	transform: rotate(7deg);
-}
+    /* Floating Images */
+    .float-981273 {
+        width: auto; /* Ensure images scale properly */
+    }
 
-/* Floating SVGs */
-.floating-svg {
-	width: 60px;
-	opacity: 0.6;
-}
+    /* Image 1 */
+    .img-267845 {
+        top: 10%; /* Adjust positioning */
+        left: 5%;
+        width: 150px; /* Reduce size for mobile */
+        height: auto; /* Maintain aspect ratio */
+    }
 
-.svg-5 {
-	width: 90px !important;
-}
+    /* Image 2 */
+    .img-745129 {
+        bottom: 10%; /* Adjust positioning */
+        right: 5%;
+        width: 200px; /* Reduce size for mobile */
+        height: auto; /* Maintain aspect ratio */
+    }
 
-/* Individual SVG Positioning */
-.svg-1 { top: 15%; left: 5%; }
-.svg-2 { top: 20%; right: 8%; }
-.svg-3 { bottom: 3%; left: 5%; }
-.svg-4 { bottom: 8%; right: 40%; }
-.svg-5 { bottom: 6%; right: 4%; }
+    /* Floating Background SVGs */
+    .floating-svg {
+        width: 50px; /* Reduce size for mobile */
+        opacity: 0.5; /* Make SVGs less prominent */
+    }
+
+    /* Individual Positioning for SVGs */
+    .svg-1 { top: 10%; left: 5%; }
+    .svg-2 { top: 15%; right: 5%; }
+    .svg-3 { bottom: 5%; left: 5%; }
+    .svg-4 { bottom: 10%; right: 30%; }
+    .svg-5 { bottom: 5%; right: 5%; width: 80px !important; } /* Adjust size */
 
 	.choose-us-section {
 		padding: 80px 20px 40px 20px;
@@ -1311,30 +1341,7 @@ body {
         font-size: 1rem;
     }
 
- /* Hero Section */
- .hero-section {
-	padding: 3rem 2rem;
-	text-align: center;
-}
 
-.hero-section h1 {
-	font-size: 2rem;
-}
-
-.hero-section p {
-	font-size: 1.2rem;
-}
-
-.hero-section .btn {
-	padding: 0.8rem 1.5rem;
-}
-.banner-483726 {
-	height: 60vh;
-}
-
-.right-573812 {
-	margin-top: 60px !important;
-}
 
     /* Services Section */
     .services-container {
