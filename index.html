@@ -23,6 +23,7 @@
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
       <!-- Custom CSS -->
       <link rel="stylesheet" href="styles.css">
    </head>
@@ -40,10 +41,10 @@
                <nav class="nav-512834">
                   <ul class="list-374612">
                      <li><a href="#home">Home</a></li>
+                     <li><a href="#WhyUs">Why Us</a></li>
                      <li><a href="#ourflavours">Our Flavours</a></li>
                      <li><a href="#testimonial" >Testimonial</a></li>
                      <li><a href="#social" >Social</a></li>
-                     <li><a href="#contact" >Contact</a></li>
                   </ul>
                </nav>
                <!-- Mobile Menu Button (Hamburger Icon) -->
@@ -56,10 +57,10 @@
          <nav class="mobile-nav" id="mobile-nav">
             <ul class="list-374612">
                <li><a href="#home">Home</a></li>
+               <li><a href="#WhyUs">Why Us</a></li>
                <li><a href="#ourflavours">Our Flavours</a></li>
                <li><a href="#testimonial">Testimonial</a></li>
                <li><a href="#social">Social</a></li>
-               <li><a href="#contact">Contact</a></li>
             </ul>
             <!-- Inside .mobile-nav -->
             <button class="close-btn" id="close-btn">X</button>
@@ -67,6 +68,12 @@
       </header>
       <section class="banner-483726 container-fluid" id="home">
          <div class="row g-0 align-items-center">
+            <!-- Background Floating SVGs -->
+            <img src="assets/pictures/091a3d80-es-hero-object-01.png" class="floating-svg svg-1" alt="Floating SVG 1">
+            <img src="assets/pictures/8e7c7fe3-es-hero-object-03.png" class="floating-svg svg-2" alt="Floating SVG 2">
+            <img src="assets/pictures/bd5cc27f-es-hero-object-02.png" class="floating-svg svg-3" alt="Floating SVG 3">
+            <img src="assets/pictures/8e27ae9a-es-hero-object-04.png" class="floating-svg svg-4" alt="Floating SVG 4">
+            <img src="assets/pictures/6f0410f2-es-hero-object-06.png" class="floating-svg svg-5" alt="Floating SVG 5">
             <!-- Left Column -->
             <div class="col-md-6 left-827364 text-start">
                <h1>Flavors</h1>
@@ -81,7 +88,7 @@
          </div>
       </section>
       <!-- Why Choose Us Section -->
-      <section class="choose-us-section">
+      <section class="choose-us-section" id="WhyUs">
          <h2 class="section-title">Why Choose Us</h2>
          <div class="carousel-container owl-carousel owl-theme">
             <div class="carousel-item">
@@ -366,81 +373,100 @@
       </script>
       <script>
          document.addEventListener("DOMContentLoaded", function () {
-             let floatingSpeed = 0.03;
              let angle = 0;
+             let svgAngle = 0;
+             let scrollSpeedFactor = 0.1; // Parallax speed factor
          
-             function animateFloatingImages() {
-                 angle += floatingSpeed;
-                 let floatOffset = Math.sin(angle) * 10; // Smooth floating movement
+             function animateElements() {
+                 angle += 0.015; // Smooth floating for Softicery images
+                 svgAngle += 0.008; // Slower movement for SVGs
          
-                 document.querySelector(".img-267845").style.transform = `translate(${window.scrollY * 0.1}px, ${floatOffset}px) rotate(-7deg)`;
-                 document.querySelector(".img-745129").style.transform = `translate(${window.scrollY * -0.1}px, ${-floatOffset}px) rotate(10deg)`;
+                 // Select main floating images (Softicery)
+                 let img1 = document.querySelector(".img-267845");
+                 let img2 = document.querySelector(".img-745129");
          
-                 requestAnimationFrame(animateFloatingImages);
-             }
+                 if (img1) {
+                     img1.style.transform = `translateY(${Math.sin(angle) * 15}px) rotate(-7deg)`; // Keeping original CSS rotation
+                 }
+                 if (img2) {
+                     img2.style.transform = `translateY(${Math.cos(angle) * 15}px) rotate(10deg)`; // Keeping original CSS rotation
+                 }
          
-             animateFloatingImages(); // Start animation
+                 // Animate floating SVGs with **slower unique motion**
+                 document.querySelectorAll(".floating-svg").forEach((svg, index) => {
+                     let floatX = Math.sin(svgAngle + index) * (8 + index * 2); // Smoother horizontal movement
+                     let floatY = Math.cos(svgAngle + index * 1.5) * (10 + index * 2); // Slower vertical motion
+                     let rotation = Math.sin(svgAngle * (index + 1) * 0.4) * 5; // Softer rotation
          
-             // Scroll-based movement
-             window.addEventListener("scroll", function () {
-                 let scrollY = window.scrollY;
-                 document.querySelector(".img-267845").style.transform = `translate(${scrollY * 0.1}px, ${Math.sin(angle) * 10}px) rotate(-7deg)`;
-                 document.querySelector(".img-745129").style.transform = `translate(${scrollY * -0.1}px, ${Math.sin(angle) * -10}px) rotate(10deg)`;
-             });
-         
-             // Hover Effect (Fixed)
-             document.querySelectorAll(".floating-892374").forEach(img => {
-                 img.addEventListener("mouseenter", () => {
-                     img.style.transition = "transform 0.3s ease-out";
-                     img.style.transform += " scale(1.05) rotate(5deg)";
+                     svg.style.transform = `translate(${floatX}px, ${floatY}px) rotate(${rotation}deg)`;
                  });
          
-                 img.addEventListener("mouseleave", () => {
-                     img.style.transition = "transform 0.3s ease-out";
-                     img.style.transform = img.style.transform.replace(" scale(1.05) rotate(5deg)", "");
+                 requestAnimationFrame(animateElements);
+             }
+         
+             animateElements(); // Start animation
+         
+             // Parallax Effect on Scroll
+             window.addEventListener("scroll", function () {
+                 let scrollY = window.scrollY;
+         
+                 if (img1) {
+                     img1.style.transform = `translateY(${Math.sin(angle) * 15}px) rotate(-7deg)`; // Keeping rotation
+                 }
+                 if (img2) {
+                     img2.style.transform = `translateY(${Math.cos(angle) * 15}px) rotate(10deg)`; // Keeping rotation
+                 }
+         
+                 document.querySelectorAll(".floating-svg").forEach((svg, index) => {
+                     let direction = index % 2 === 0 ? 1 : -1;
+                     let scrollOffset = scrollY * 0.015 * direction; // Reduced speed
+         
+                     svg.style.transform = `translate(${scrollOffset}px, ${Math.sin(svgAngle) * 15 * direction}px) rotate(${Math.cos(svgAngle) * 8}deg)`;
                  });
              });
          });
+         
+               
       </script>
       <script>
-            document.addEventListener("DOMContentLoaded", function () {
-    const sections = document.querySelectorAll("section");
-    const navLinks = document.querySelectorAll(".nav-512834 ul li a, .mobile-nav ul li a");
-
-    // Intersection Observer settings for better section detection
-    const observerOptions = {
-        root: null,
-        rootMargin: "-50px 0px -50% 0px", // Adjusted for better accuracy
-        threshold: 0.1, // At least 10% of the section should be visible
-    };
-
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const activeId = entry.target.getAttribute("id");
-
-                // Remove active state from all nav links
-                navLinks.forEach(link => link.classList.remove("active"));
-
-                // Add active state to the corresponding nav link
-                const activeLink = document.querySelector(`.nav-512834 ul li a[href="#${activeId}"], .mobile-nav ul li a[href="#${activeId}"]`);
-                if (activeLink) {
-                    activeLink.classList.add("active");
-                }
-            }
-        });
-    }, observerOptions);
-
-    // Observe each section
-    sections.forEach(section => observer.observe(section));
-
-    // Close mobile menu on click
-    navLinks.forEach(link => {
-        link.addEventListener("click", function () {
-            document.getElementById("mobile-nav").classList.remove("open");
-        });
-    });
-});
+         document.addEventListener("DOMContentLoaded", function () {
+         const sections = document.querySelectorAll("section");
+         const navLinks = document.querySelectorAll(".nav-512834 ul li a, .mobile-nav ul li a");
+         
+         // Intersection Observer settings for better section detection
+         const observerOptions = {
+         root: null,
+         rootMargin: "-50px 0px -50% 0px", // Adjusted for better accuracy
+         threshold: 0.1, // At least 10% of the section should be visible
+         };
+         
+         const observer = new IntersectionObserver(entries => {
+         entries.forEach(entry => {
+         if (entry.isIntersecting) {
+             const activeId = entry.target.getAttribute("id");
+         
+             // Remove active state from all nav links
+             navLinks.forEach(link => link.classList.remove("active"));
+         
+             // Add active state to the corresponding nav link
+             const activeLink = document.querySelector(`.nav-512834 ul li a[href="#${activeId}"], .mobile-nav ul li a[href="#${activeId}"]`);
+             if (activeLink) {
+                 activeLink.classList.add("active");
+             }
+         }
+         });
+         }, observerOptions);
+         
+         // Observe each section
+         sections.forEach(section => observer.observe(section));
+         
+         // Close mobile menu on click
+         navLinks.forEach(link => {
+         link.addEventListener("click", function () {
+         document.getElementById("mobile-nav").classList.remove("open");
+         });
+         });
+         });
       </script>
    </body>
 </html>

@@ -258,6 +258,32 @@ body {
 	transform: rotate(10deg);
 	z-index: 2;
 }
+/* Ensure parent section contains the floating elements */
+.banner-483726 {
+    position: relative; /* Important: Keeps SVGs inside this section */
+    overflow: hidden; /* Ensures they don't overflow into other sections */
+}
+
+/* Floating Background SVGs */
+.floating-svg {
+    position: absolute;
+    width: 80px; /* Adjust size as needed */
+    height: auto;
+    opacity: 0.7;
+    transition: transform 0.3s ease-out;
+    z-index: 0; /* Keeps them behind other content */
+}
+/* Floating Background SVGs */
+.floating-svg.svg-5{
+    width: 130px !important;
+}
+
+/* Individual Positioning */
+.svg-1 { top: 20%; left: 2%; }
+.svg-2 { top: 25%; right: 10%; }
+.svg-3 { bottom: 1%; left: 2%; }
+.svg-4 { bottom: 5%; right: 46%; }
+.svg-5 { bottom: 4%; right: 2%; }
 
 
 /* Container for the entire section */
@@ -367,7 +393,7 @@ body {
 
 /* Card Image */
 .flavour-card-img-top {
-    width: 100%;
+    width: 70%;
     object-fit: cover;
     border-radius: 12px 12px 0 0;
     transition: transform 0.4s ease-in-out;
@@ -406,14 +432,16 @@ body {
 
 /* Card Title Animation */
 .flavour-card-title {
-    font-family: "Poppins", sans-serif;
-    font-size: 1.5rem;
+    font-family: "Caveat", serif;
+    font-size: 2.2rem;
     font-weight: 700;
-    color: #333;
+    color: #78C05B;
     margin-bottom: 0.5rem;
     transition: transform 0.3s ease-out, opacity 0.3s ease-out;
     transform: translateY(10px);
+    text-shadow: 2px 3px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
 }
+
 
 .flavour-card:hover .flavour-card-title {
     transform: translateY(0);
@@ -890,76 +918,91 @@ body {
 		font-size: 1.8rem;
 	}
 
-	/* Hero Banner Section */
-	.banner-483726 {
-		background-size: 100% auto;
-		background-position: center top;
-		padding: 3rem 1.5rem;
-		height: auto;
-		text-align: center;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-	}
+ /* Hero Banner Section */
+ .banner-483726 {
+	background-size: cover;
+	background-position: center;
+	padding: 2rem 1rem;
+	height: auto;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+}
 
-	/* Left Column - Text */
-	.left-827364 {
-		margin-top: 50px;
-		text-align: center;
-	}
+/* Left Column - Text */
+.left-827364 {
+	margin-top: 30px;
+	text-align: center;
+}
 
-	.left-827364 h1 {
-		font-size: 65px;
-		line-height: 1.1em;
-		color: white;
-		padding-top: 30px;
-	}
+.left-827364 h1 {
+	font-size: 50px;
+	line-height: 1.2em;
+}
 
-	.left-827364 h2 {
-		font-size: 64px;
-		line-height: 1.1em;
-		color: white;
-	}
+.left-827364 h2 {
+	font-size: 48px;
+	line-height: 1.2em;
+}
 
-	.left-827364 p {
-		font-size: 18px;
-		line-height: 1.3em;
-		margin-top: 0.8rem;
-		color: white;
-		padding-left: 0px;
-	}
+.left-827364 p {
+	font-size: 16px;
+	line-height: 1.4em;
+	margin-top: 1rem;
+	padding-left: 0px;
+}
 
-	/* Right Column - Image Container */
-	.right-573812 {
-		width: 300px;
-		height: 300px;
-		margin-top: 30px;
-	}
+/* Right Column - Image Container */
+.right-573812 {
+	width: 280px;
+	height: 280px;
+	margin-top: 20px;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
 
-	/* Floating Images */
-	.float-981273 {
-		width: 80%;
-		height: auto;
-	}
+/* Floating Images */
+.float-981273 {
+	width: 85%;
+	height: auto;
+}
 
-	/* Image 1 */
-	.img-267845 {
-		top: 3%;
-		left: 5%;
-		width: 120px;
-		height: 240px;
-		transform: rotate(-5deg);
-	}
+/* Image 1 */
+.img-267845 {
+	top: 2%;
+	left: 6%;
+	width: 110px;
+	height: 220px;
+	transform: rotate(-5deg);
+}
 
-	/* Image 2 */
-	.img-745129 {
-		bottom: 3%;
-		right: 5%;
-		width: 200px;
-		height: 300px;
-		transform: rotate(7deg);
-	}
+/* Image 2 */
+.img-745129 {
+	bottom: 2%;
+	right: 6%;
+	width: 180px;
+	height: 280px;
+	transform: rotate(7deg);
+}
+
+/* Floating SVGs */
+.floating-svg {
+	width: 60px;
+	opacity: 0.6;
+}
+
+.svg-5 {
+	width: 90px !important;
+}
+
+/* Individual SVG Positioning */
+.svg-1 { top: 15%; left: 5%; }
+.svg-2 { top: 20%; right: 8%; }
+.svg-3 { bottom: 3%; left: 5%; }
+.svg-4 { bottom: 8%; right: 40%; }
+.svg-5 { bottom: 6%; right: 4%; }
 
 	.choose-us-section {
 		padding: 80px 20px 40px 20px;
@@ -1270,28 +1313,108 @@ body {
 
     /* Hero Section */
     .hero-section {
-        padding: 3rem 2rem;
+        padding: 4rem 3rem;
         text-align: center;
     }
 
     .hero-section h1 {
-        font-size: 2rem;
+        font-size: 2.5rem;
+        line-height: 1.2;
     }
 
     .hero-section p {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
+        line-height: 1.5;
+        max-width: 80%;
+        margin: 0 auto;
     }
 
     .hero-section .btn {
-        padding: 0.8rem 1.5rem;
-    }
-    .banner-483726 {
-        height: 60vh;
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
     }
 
-    .right-573812 {
-        margin-top: 60px !important;
+    /* Hero Banner Section */
+    .banner-483726 {
+        height: 80vh;
+        padding: 4rem 3rem;
+        background-size: 50% auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
+
+    /* Left Column - Text */
+    .left-827364 {
+        margin-top: 40px;
+        text-align: center;
+    }
+
+    .left-827364 h1 {
+        font-size: 75px;
+        line-height: 1.1em;
+    }
+
+    .left-827364 h2 {
+        font-size: 72px;
+        line-height: 1.1em;
+    }
+
+    .left-827364 p {
+        font-size: 20px;
+        line-height: 1.4em;
+        margin-top: 1rem;
+    }
+
+    /* Right Column - Image Container */
+    .right-573812 {
+        width: 380px;
+        height: 380px;
+        margin-top: 50px !important;
+        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Floating Images */
+    .float-981273 {
+        width: 90%;
+        height: auto;
+    }
+
+    /* Image 1 */
+    .img-267845 {
+        top: 3%;
+        left: 8%;
+        width: 160px;
+        height: 300px;
+        transform: rotate(-6deg);
+    }
+
+    /* Image 2 */
+    .img-745129 {
+        bottom: 3%;
+        right: 8%;
+        width: 260px;
+        height: 400px;
+        transform: rotate(8deg);
+    }
+
+    /* Floating SVGs */
+    .floating-svg {
+        width: 70px;
+        opacity: 0.7;
+    }
+
+    .floating-svg.svg-5 {
+        width: 100px !important;
+    }
+
+    /* Individual SVG Positioning */
+    .svg-1 { top: 18%; left: 4%; }
+    .svg-2 { top: 22%; right: 8%; }
+    .svg-3 { bottom: 2%; left: 4%; }
+    .svg-4 { bottom: 6%; right: 42%; }
+    .svg-5 { bottom: 5%; right: 3%; }
     /* Services Section */
     .services-container {
         grid-template-columns: repeat(2, 1fr); /* 2 columns for better spacing */
