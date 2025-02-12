@@ -188,30 +188,61 @@
             </div>
             <!-- Gradient Background -->
             <div class="flavour-gradient-background"></div>
+            
             <!-- Review Section -->
-            <div class="flavour-section-review-container">
-               <div class="flavour-review-flexbox">
-                  <!-- Reviewer Logo -->
-                  <div class="flavour-reviewer-logo">
-                     <img src="https://static.live.templately.com/woocommerce/2022/11/a7358f96-es-avater01.png" 
-                        alt="Reviewer Logo" class="flavour-review-logo-img">
-                  </div>
-                  <!-- Review Text -->
-                  <div class="flavour-reviewer-text">
-                     <div class="flavour-review-text">
-                        "Trusted to deliver the world’s best Ice Cream in local communities across the country."
-                     </div>
-                     <div class="flavour-stars-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                     </div>
-                     <div class="flavour-reviewer-name">Saptarshi Dasgupta</div>
-                  </div>
-               </div>
+<div class="flavour-section-review-container">
+   <div class="owl-carousel owl-theme">
+      <!-- Review 1 -->
+      <div class="flavour-review-flexbox">
+         <!-- Reviewer Logo -->
+         <div class="flavour-reviewer-logo">
+            <img src="https://static.live.templately.com/woocommerce/2022/11/a7358f96-es-avater01.png" 
+               alt="Reviewer Logo" class="flavour-review-logo-img">
+         </div>
+         <!-- Review Text -->
+         <div class="flavour-reviewer-text">
+            <div class="flavour-review-text">
+               "Trusted to deliver the world’s best Ice Cream in local communities across the country."
             </div>
+            <div class="flavour-stars-rating">
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+            </div>
+            <div class="flavour-reviewer-name">Saptarshi Dasgupta</div>
+         </div>
+      </div>
+
+      <!-- Review 2 -->
+      <div class="flavour-review-flexbox">
+         <!-- Reviewer Logo -->
+         <div class="flavour-reviewer-logo">
+            <img src="https://www.w3schools.com/w3images/avatar6.png" 
+               alt="Reviewer Logo" class="flavour-review-logo-img">
+         </div>
+         <!-- Review Text -->
+         <div class="flavour-reviewer-text">
+            <div class="flavour-review-text">
+               "Amazing flavors and excellent service! Highly recommended for all ice cream lovers."
+            </div>
+            <div class="flavour-stars-rating">
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star"></i>
+               <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div class="flavour-reviewer-name">Priya Sharma</div>
+         </div>
+      </div>
+
+      <!-- Add more reviews here as needed -->
+   </div>
+</div>
+
+
          </div>
       </section>
       <!-- Instagram Section with Image Slider -->
@@ -361,6 +392,30 @@
       <script src="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/owl.carousel.min.js"></script>
       <script>
          $(document).ready(function(){
+            // Initialize Owl Carousel for the review section
+            $(".flavour-section-review-container .owl-carousel").owlCarousel({
+               loop: true,              // Infinite loop
+               margin: 20,              // Space between items
+               nav: false,              // Don't show navigation arrows
+               dots: true,              // Enable dots navigation
+               autoplay: true,          // Enable autoplay
+               autoplayTimeout: 5000,   // 5 seconds per item
+               responsive: {
+                  0: {
+                     items: 1           // Show 1 item on small screens
+                  },
+                  600: {
+                     items: 1           // Show 1 item on medium screens
+                  },
+                  1000: {
+                     items: 1           // Show 1 item on large screens
+                  }
+               }
+            });
+         });
+      </script>
+      <script>
+         $(document).ready(function(){
             $(".owl-carousel").owlCarousel({
                loop: true,              // Infinite loop
                margin: 10,              // Space between items
@@ -479,5 +534,6 @@
          });
          });
       </script>
+      
    </body>
 </html>
