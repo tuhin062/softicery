@@ -69,7 +69,7 @@ body {
 .nav-512834 .list-374612 {
 	list-style: none;
 	display: flex;
-	gap: 20px;
+	gap: 40px;
 	margin: 0;
 	padding: 0;
 }
@@ -659,20 +659,13 @@ body {
 	color: #373547;
 }
 
-/* Hashtag Specific Styling */
-.instagram-showcase .instagram-showcase-left p:first-of-type {
-	background: linear-gradient(#FFC600, #FF0300);
-	-webkit-background-clip: text;
-	color: transparent;
-	margin-bottom: 1.5rem;
-	padding-bottom: 20px;
-	font-family: "Lato", Sans-serif;
-	font-size: 68px;
-	font-weight: 900;
-	text-transform: lowercase;
-	line-height: 1.2em;
-	letter-spacing: 0px;
-	word-spacing: 0em;
+/* Image Styling */
+.instagram-showcase .instagram-showcase-left .instagram-hashtag-image {
+	width: 100%; /* Makes the image responsive */
+	max-width: 400px; /* Adjust based on your design needs */
+	height: auto; /* Maintains aspect ratio */
+	margin-bottom: 1.5rem; /* Adds spacing below the image */
+	display: block; /* Ensures the image is treated as a block element */
 }
 
 /* Instagram Slider Container */
@@ -1189,26 +1182,28 @@ body {
 		align-items: center;
 	}
 
-	/* Adjust Left Content */
-	.instagram-showcase .instagram-showcase-left {
-		max-width: 100%;
-		padding: 1rem;
-	}
-
-	.instagram-showcase .instagram-showcase-left h3 {
-		font-size: 42px;
-		padding-bottom: 15px;
-	}
-
-	.instagram-showcase .instagram-showcase-left p {
-		font-size: 18px;
-		line-height: 1.6em;
-	}
-
-	.instagram-showcase .instagram-showcase-left p:first-of-type {
-		font-size: 42px;
-		margin-bottom: 1rem;
-	}
+		/* Adjust Left Content */
+		.instagram-showcase .instagram-showcase-left {
+			max-width: 100%;
+			padding: 1rem;
+		}
+	
+		.instagram-showcase .instagram-showcase-left h3 {
+			font-size: 42px;
+			padding-bottom: 15px;
+		}
+	
+		.instagram-showcase .instagram-showcase-left p {
+			font-size: 18px;
+			line-height: 1.6em;
+		}
+	
+		/* Image Styling for Mobile */
+		.instagram-showcase .instagram-showcase-left .instagram-hashtag-image {
+			max-width: 100%; /* Ensures the image doesn't overflow its container */
+			height: auto; /* Maintains aspect ratio */
+			margin-bottom: 1rem; /* Adds spacing below the image */
+		}
 
 	/* Adjust Image Slider */
 	.instagram-showcase .instagram-showcase-slider {
