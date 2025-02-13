@@ -662,8 +662,8 @@ body {
 /* Image Styling */
 .instagram-showcase .instagram-showcase-left .instagram-hashtag-image {
 	width: 100%; /* Makes the image responsive */
-	max-width: 400px; /* Adjust based on your design needs */
-	height: auto; /* Maintains aspect ratio */
+	max-width: 500px; /* Adjust based on your design needs */
+	height: 88px; /* Maintains aspect ratio */
 	margin-bottom: 1.5rem; /* Adds spacing below the image */
 	display: block; /* Ensures the image is treated as a block element */
 }
