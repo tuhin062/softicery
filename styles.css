@@ -1,3 +1,11 @@
+@font-face {
+    font-family: 'penutbutter'; /* Choose a custom name */
+    src:
+         url('assets/fonts/Peanut Butter.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* Hides the scrollbar while keeping scrolling functionality */
 html,
 body {
@@ -209,11 +217,12 @@ body {
 
 .left-827364 h1,
 .left-827364 h2 {
-    font-family: "Lato", Sans-serif;
+	font-family: "penutbutter";
+    /*font-family: "Lato", Sans-serif;*/
 	/* font-family: 'Segoe Script', sans-serif; */
 	/* font-family: "Kaushan Script", serif; */
     font-size: 102px;
-    font-weight: 800;
+    font-weight: 400;
     line-height: 1.1em;
     letter-spacing: 0px;
     word-spacing: 0em;
