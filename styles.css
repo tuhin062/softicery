@@ -523,10 +523,10 @@ body {
 }
 
 .flavour-section-heading {
-    text-align: left;
+    text-align: center;
     /* font-family: "Lato", Sans-serif; */
 	font-family: 'Segoe Script', sans-serif;
-    font-size: 88px;
+    font-size: 4rem;
     font-weight: 900;
     line-height: 1.2em;
     color: #373547;
@@ -549,7 +549,7 @@ body {
 
 /* Video Styling */
 .flavour-video {
-    width: 90%;
+    width: 100%;
     max-width: 100%;
     height: auto;
     border-radius: 10px;
