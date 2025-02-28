@@ -713,7 +713,8 @@ body {
 
 /* General Footer Styles */
 .footer {
-	background-color: #373547;
+	/*background-color: #373547;*/
+    background-color: #74BC57;
 	padding: 7rem 0rem 0rem 0rem;
 	color: #f8f9fa;
 }
