@@ -1528,3 +1528,165 @@ section {
     scroll-margin-top: 100px; /* Prevents section from being hidden under sticky header */
     min-height: 10vh; /* Ensures sections are large enough for IntersectionObserver */
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Signature Flavours Section */
+.signature-flavours-section {
+    text-align: center;
+    background: linear-gradient(180deg, #FBFBFB 0%, #F1F1F1 100%);
+    padding: 6rem 0;
+}
+
+/* Section Heading */
+.signature-flavours-heading {
+    font-family: 'Segoe Script', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #2E2E2E;
+    text-transform: capitalize;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-out forwards;
+    margin-bottom: 4rem;
+}
+
+/* Flexbox Wrapper */
+.signature-flavour-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+/* Signature Flavour Card */
+.signature-flavour-card {
+    flex: 1;
+    min-width: 300px;
+    max-width: 390px;
+    position: relative;
+    border-radius: 16px;
+    background: #F4F4F4;;
+    transition: transform 0.4s ease;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.signature-flavour-card:hover {
+    transform: translateY(-8px);
+}
+
+/* Flavour Image Wrapper */
+.signature-flavour-img-wrapper {
+    overflow: hidden;
+    border-radius: 16px 16px 16px 16px;
+	margin-bottom: 20px; /* Adjust this value as needed */
+
+}
+
+.signature-flavour-img {
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.signature-flavour-card:hover .signature-flavour-img {
+    transform: scale(1.05);
+}
+
+/* Card Content */
+.signature-flavour-content {
+    padding: 1.8rem;
+    text-align: center;
+    position: relative;
+    transition: background 0.3s ease;
+	border-radius: 16px 16px 16px 16px;
+
+}
+
+/* Dynamic Background Colors */
+.signature-flavour-card:nth-child(1) .signature-flavour-content {
+    background: #FCE362; /* Warm Yellow */
+}
+.signature-flavour-card:nth-child(2) .signature-flavour-content {
+    background: #78C05C; /* Fresh Green */
+}
+.signature-flavour-card:nth-child(3) .signature-flavour-content {
+    background: #FC6165; /* Soft Red */
+}
+
+/* Card Title */
+.signature-flavour-title {
+    font-family: "Caveat", serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: Black;
+    margin-bottom: 0.5rem;
+    transition: transform 0.3sease-out, opacity 0.3sease-out;
+    transform: translateY(10px);
+    text-shadow: 2px 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.signature-flavour-card:hover .signature-flavour-title {
+    color: #FFF;
+}
+
+/* Card Text */
+.signature-flavour-text {
+    font-family: "DM Sans", sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #5A5A5A;
+    line-height: 1.5;
+    transition: color 0.3s ease;
+}
+
+.signature-flavour-card:hover .signature-flavour-text {
+    color: #FFF;
+}
+
+/* Floating Animation */
+@keyframes floatEffect {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-4px); }
+}
+
+/* Fade In Up Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
