@@ -710,7 +710,19 @@ body {
 	border-radius: 10px;
 }
 
-
+.custom-image-container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  .custom-image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
 /* General Footer Styles */
 .footer {
 	/*background-color: #373547;*/
