@@ -6,6 +6,13 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'AgetaChubby';
+    src: url('assets/fonts/ageta-chubby-demo.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
 /* Hides the scrollbar while keeping scrolling functionality */
 html,
 body {
@@ -217,14 +224,15 @@ body {
 
 .left-827364 h1,
 .left-827364 h2 {
-	font-family: "penutbutter";
+    font-family: 'AgetaChubby', sans-serif;
+	/*font-family: "penutbutter";*/
     /*font-family: "Lato", Sans-serif;*/
 	/* font-family: 'Segoe Script', sans-serif; */
 	/* font-family: "Kaushan Script", serif; */
-    font-size: 120px;
+    font-size: 90px;
     font-weight: 400;
     line-height: 1em;
-    color: #373547;
+    color: #EC3264;
 }
 
 .left-827364 p {
