@@ -229,10 +229,11 @@ body {
     /*font-family: "Lato", Sans-serif;*/
 	/* font-family: 'Segoe Script', sans-serif; */
 	/* font-family: "Kaushan Script", serif; */
-    font-size: 90px;
+    font-size: 100px;
     font-weight: 400;
     line-height: 1em;
-    color: #EC3264;
+    /*color: #EC3264;*/
+    color: #FB6166;
 }
 
 .left-827364 p {
