@@ -187,6 +187,23 @@ body {
 	display: block;
 }
 
+/* Banner Section */
+.banner-section {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.banner-image-container {
+    width: 100%;
+}
+
+.banner-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
 
 
 /* Hero Banner Section */
