@@ -498,13 +498,13 @@ body {
 
 /* Dynamic Background Colors */
 .signature-flavour-card:nth-child(1) .signature-flavour-content {
-    background: #FCE362; /* Warm Yellow */
+    background: #F0BC06; /* Warm Yellow */
 }
 .signature-flavour-card:nth-child(2) .signature-flavour-content {
-    background: #78C05C; /* Fresh Green */
+    background: #84BD32; /* Fresh Green */
 }
 .signature-flavour-card:nth-child(3) .signature-flavour-content {
-    background: #FC6165; /* Soft Red */
+    background: #ED2E64; /* Soft Red */
 }
 
 /* Card Title */
@@ -582,7 +582,7 @@ body {
     font-weight: 900;
     line-height: 1.2em;
     /*color: #373547;*/
-    color: #f0bc06;
+    color: white;
     padding: 40px 50px;
 }
 
