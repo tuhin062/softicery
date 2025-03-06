@@ -665,12 +665,14 @@ body {
     font-size: 1.5em;
     line-height: 1.4;
     margin-bottom: 1rem;
+    color: white;
 }
 
 /* Stars Rating */
 .flavour-stars-rating {
     font-size: 1rem;
     color: #FFB400;
+    color: white;
     margin-bottom: 0.5rem;
 }
 
@@ -766,10 +768,11 @@ body {
 }
 
 .custom-image-container {
-    width: 100%;
+    width: 50%;
     margin: 0;
     padding: 0;
     overflow: hidden;
+    margin-left: 350px;
   }
   
   .custom-image {
