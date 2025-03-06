@@ -1,0 +1,1605 @@
+@font-face {
+    font-family: 'penutbutter'; /* Choose a custom name */
+    src:
+         url('assets/fonts/Peanut Butter.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AgetaChubby';
+    src: url('assets/fonts/ageta-chubby-demo.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+/* Hides the scrollbar while keeping scrolling functionality */
+html,
+body {
+	height: 100%;
+	/* Ensure body takes full height */
+	overflow: hidden;
+	/* Hide the scrollbars */
+	font-family: "DM Sans", serif;
+    scroll-behavior: smooth;
+}
+
+body {
+	overflow-y: scroll;
+	/* Allow vertical scrolling */
+	-ms-overflow-style: none;
+	/* For Internet Explorer 10+ */
+	scrollbar-width: none;
+	/* For Firefox */
+}
+
+/* Hides scrollbar for WebKit-based browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+	width: 0;
+	/* Hides the scrollbar */
+}
+
+/* Optional: Custom scrollbar for Webkit browsers */
+::-webkit-scrollbar-thumb {
+	background-color: #888;
+	border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+	background-color: transparent;
+}
+
+
+/* General Styles */
+.sticky-834291 {
+    margin-top: 0px;
+    position: fixed;
+    top: 0;
+    left: 80px;
+    width: 90%;
+    padding: 15px 0px 10px 0px;
+    background-color: rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    border-radius: 30px 30px 75px 75px;
+}
+
+.container-129384 {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+/* Header Layout */
+.header-981273 {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+/* Logo */
+.logo-745612 img {
+	max-height: 58px;
+}
+
+/* Desktop Navigation Menu */
+.nav-512834 .list-374612 {
+	list-style: none;
+	display: flex;
+	gap: 40px;
+	margin: 0;
+	padding: 0;
+}
+
+.nav-512834 .list-374612 li {
+	display: inline-block;
+}
+
+.nav-512834 .list-374612 li a {
+	text-decoration: none;
+	color: #FFF7F7;
+	font-size: 1rem;
+	font-weight: 500;
+	transition: color 0.3s ease;
+}
+
+.nav-512834 .list-374612 li a:hover {
+	color: #96e377;
+}
+
+/* Mobile Navigation (Initially Hidden) */
+.mobile-nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.9);
+	transform: translateX(-100%);
+	opacity: 0;
+	transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+	z-index: 999;
+}
+
+.mobile-nav.active {
+	transform: translateX(0);
+	opacity: 1;
+}
+
+/* Mobile Navigation Menu Items */
+.mobile-nav .list-374612 {
+	list-style: none;
+	padding: 40px 20px;
+	margin: 0;
+	text-align: center;
+	color: #FFF7F7;
+}
+
+.mobile-nav .list-374612 li {
+	margin-bottom: 15px;
+}
+
+.mobile-nav .list-374612 li a {
+	text-decoration: none;
+	color: #FFF7F7;
+	font-size: 1.5rem;
+	font-weight: 500;
+	display: block;
+	padding: 10px 0;
+	transition: color 0.3s ease;
+}
+
+.mobile-nav .list-374612 li a:hover {
+	color: #ED2433;
+}
+
+/* Backdrop */
+.mobile-nav.active::before {
+	content: '';
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: -1;
+	/* Behind the menu */
+}
+
+/* Close Button Styling */
+#close-btn {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	background-color: transparent;
+	color: #FFF7F7;
+	font-size: 1.8rem;
+	border: none;
+	cursor: pointer;
+	transition: color 0.3s ease;
+}
+
+#close-btn:hover {
+	color: #ED2433;
+	/* Change to your theme color when hovered */
+}
+
+/* Hide hamburger button on larger screens (Desktop view) */
+.hamburger-icon {
+	display: block;
+}
+
+/* Banner Section */
+.banner-section {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.banner-image-container {
+    width: 100%;
+}
+
+.banner-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* Hero Banner Section */
+.banner-483726 {
+    background-color: #FFFFFF;
+    background-image: url('https://static.live.templately.com/woocommerce/2022/11/43c0fc8e-es-hero-bg.png');
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-size: 40% auto;
+    padding: 5rem 12rem;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center content horizontally */
+}
+
+/* Flexbox Wrapper */
+.banner-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+	padding-top: 90px;
+}
+
+/* Left Column - Text Styling */
+.left-827364 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #373547;
+    flex: 1; /* Makes sure it takes half the space */
+}
+
+.left-827364 h1,
+.left-827364 h2 {
+    font-family: 'AgetaChubby', sans-serif;
+	/*font-family: "penutbutter";*/
+    /*font-family: "Lato", Sans-serif;*/
+	/* font-family: 'Segoe Script', sans-serif; */
+	/* font-family: "Kaushan Script", serif; */
+    font-size: 100px;
+    font-weight: 400;
+    line-height: 1em;
+    /*color: #EC3264;*/
+    color: #FB6166;
+}
+
+.left-827364 p {
+	font-family: Caveat, serif;
+	font-size: 36px;
+    font-weight: 600;
+    line-height: 1.2em;
+    letter-spacing: 0px;
+    word-spacing: 0em;
+    color: #949BB0;
+}
+
+/* Right Column - Image Container */
+.right-573812 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(180deg, #FFEAEB 0%, #F67275 100%);
+    border-radius: 50%;
+    width: 500px;
+    height: 500px;
+    position: relative;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    flex: 1; /* Makes sure it takes half the space */
+    max-width: 500px;
+}
+
+/* Floating Images */
+.float-981273 {
+    position: absolute;
+    transition: transform 0.3s ease-out;
+}
+
+/* Image 1 */
+.img-267845 {
+    top: 5%;
+    left: 10%;
+    width: 200px;
+    height: 390px;
+    transform: rotate(-7deg);
+    z-index: 2;
+}
+
+/* Image 2 */
+.img-745129 {
+    bottom: 5%;
+    right: 6%;
+    width: 320px;
+    height: 500px;
+    transform: rotate(10deg);
+    z-index: 2;
+}
+
+/* Ensure parent section contains the floating elements */
+.banner-483726 {
+    position: relative; /* Important: Keeps SVGs inside this section */
+    overflow: hidden; /* Ensures they don't overflow into other sections */
+}
+
+/* Floating Background SVGs */
+.floating-svg {
+    position: absolute;
+    width: 80px; /* Adjust size as needed */
+    height: auto;
+    opacity: 0.7;
+    transition: transform 0.3s ease-out;
+    z-index: 0; /* Keeps them behind other content */
+}
+
+/* Floating Background SVGs */
+.floating-svg.svg-5 {
+    width: 130px !important;
+}
+
+/* Individual Positioning */
+.svg-1 { top: 20%; left: 2%; }
+.svg-2 { top: 25%; right: 10%; }
+.svg-3 { bottom: 1%; left: 2%; }
+.svg-4 { bottom: 5%; right: 46%; }
+.svg-5 { bottom: 4%; right: 2%; }
+
+
+
+/* Container for the entire section */
+.choose-us-section {
+	width: 100%;
+	padding: 160px 40px 60px 40px;
+	/* Padding added to the left and right */
+}
+
+.choose-us-section .section-title {
+	font-size: 58px;
+	/* font-weight: 900;*/
+	line-height: 1.2em;
+	letter-spacing: 0px;
+	word-spacing: 0em;
+	text-align: center;
+	color: #373547;
+	margin-bottom: 74px;
+	/* font-family: "Open Sans", "Helvetica Neue", sans-serif; */
+	font-family: 'Segoe Script', sans-serif;
+	font-weight: bolder;
+}
+
+.owl-carousel {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 5px;
+	margin-bottom: 20px;
+	padding: 0px 100px;
+	/* Padding added to the left and right */
+}
+
+.owl-carousel .carousel-item {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.carousel-content {
+	padding: 30px;
+	text-align: center;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Center the image inside its parent container */
+.carousel-content img {
+	width: 100px;
+	height: 100px;
+	margin-bottom: 20px;
+	transition: transform 0.3s ease;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.carousel-content img:hover {
+	transform: scale(1.1);
+}
+
+.carousel-content h3 {
+	font-size: 1.2rem;
+	font-weight: 700;
+	color: #333;
+	margin-top: 10px;
+	letter-spacing: 0.5px;
+	text-align: center;
+}
+
+
+/* Signature Flavours Section */
+.signature-flavours-section {
+    text-align: center;
+    background: linear-gradient(180deg, #FBFBFB 0%, #F1F1F1 100%);
+    padding: 6rem 0;
+}
+
+/* Section Heading */
+.signature-flavours-heading {
+    font-family: 'Segoe Script', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #2E2E2E;
+    text-transform: capitalize;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-out forwards;
+    margin-bottom: 4rem;
+}
+
+/* Flexbox Wrapper */
+.signature-flavour-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+
+/* Signature Flavour Card */
+.signature-flavour-card {
+    flex: 1;
+    min-width: 300px;
+    max-width: 390px;
+    position: relative;
+    border-radius: 16px;
+    background: #F4F4F4;;
+    transition: transform 0.4s ease;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.signature-flavour-card:hover {
+    transform: translateY(-8px);
+}
+
+/* Flavour Image Wrapper */
+.signature-flavour-img-wrapper {
+    overflow: hidden;
+    border-radius: 16px 16px 16px 16px;
+	margin-bottom: 20px; /* Adjust this value as needed */
+
+}
+
+.signature-flavour-img {
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.signature-flavour-card:hover .signature-flavour-img {
+    transform: scale(1.05);
+}
+
+/* Card Content */
+.signature-flavour-content {
+    padding: 1.8rem;
+    text-align: center;
+    position: relative;
+    transition: background 0.3s ease;
+	border-radius: 16px 16px 16px 16px;
+
+}
+
+/* Dynamic Background Colors */
+.signature-flavour-card:nth-child(1) .signature-flavour-content {
+    background: #FCE362; /* Warm Yellow */
+}
+.signature-flavour-card:nth-child(2) .signature-flavour-content {
+    background: #78C05C; /* Fresh Green */
+}
+.signature-flavour-card:nth-child(3) .signature-flavour-content {
+    background: #FC6165; /* Soft Red */
+}
+
+/* Card Title */
+.signature-flavour-title {
+    font-family: "Caveat", serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: Black;
+    margin-bottom: 0.5rem;
+    transition: transform 0.3sease-out, opacity 0.3sease-out;
+    transform: translateY(10px);
+    text-shadow: 2px 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.signature-flavour-card:hover .signature-flavour-title {
+    color: #FFF;
+}
+
+/* Card Text */
+.signature-flavour-text {
+    font-family: "DM Sans", sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #5A5A5A;
+    line-height: 1.5;
+    transition: color 0.3s ease;
+}
+
+.signature-flavour-card:hover .signature-flavour-text {
+    color: #FFF;
+}
+
+/* Floating Animation */
+@keyframes floatEffect {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-4px); }
+}
+
+/* Fade In Up Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+/* Flavour Showcase Section */
+.flavour-showcase-section {
+    position: relative;
+    padding: 3rem 0;
+    min-height: 400px;
+}
+
+/* Heading */
+.flavour-section-heading-container {
+    z-index: 2;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.flavour-section-heading {
+    text-align: center;
+    /* font-family: "Lato", Sans-serif; */
+	font-family: 'Segoe Script', sans-serif;
+    font-size: 4rem;
+    font-weight: 900;
+    line-height: 1.2em;
+    color: #373547;
+    padding: 40px 50px;
+}
+
+/* Video Section */
+.flavour-video-container {
+    z-index: 3;
+    position: relative;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent; /* Ensures the white background */
+    padding: 10px;
+    border-radius: 10px;
+    overflow: hidden; /* Prevents unwanted cropping */
+}
+
+/* Video Styling */
+.flavour-video {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.1); /* Super subtle, clean shadow */
+
+	object-fit: contain; /* Ensures full video visibility */
+    background-color: white !important; /* Forces white background */
+}
+
+/* Gradient Background */
+.flavour-gradient-background {
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(90deg, #78C05B 5%, #FB61660D 0%);
+}
+
+/* Review Section */
+
+.flavour-section-review-container {
+    padding: 5rem 5rem;
+}
+
+/* Flexbox Layout */
+.flavour-review-flexbox {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 1.5rem;
+}
+
+/* Reviewer Logo */
+.flavour-reviewer-logo {
+    flex: 0 0 auto;
+    max-width: 120px;
+}
+
+.flavour-review-logo-img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+/* Review Text */
+.flavour-reviewer-text {
+    flex: 1;
+    text-align: left;
+    padding-left: 1rem;
+}
+
+.flavour-review-text {
+    font-family: "Open Sans", sans-serif;
+    font-size: 2em;
+    line-height: 1.4;
+    margin-bottom: 2rem;
+}
+
+/* Stars Rating */
+.flavour-stars-rating {
+    font-size: 1rem;
+    color: #FFB400;
+    margin-bottom: 0.5rem;
+}
+
+/* Reviewer Name */
+.flavour-reviewer-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ED2433;
+}
+
+/* Instagram Section Styles */
+.instagram-showcase {
+	background-color: #f8f9fa;
+	color: #333;
+}
+
+.instagram-showcase .container {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+/* Left Content Block Styling */
+.instagram-showcase .instagram-showcase-left {
+	flex: 1;
+	max-width: 50%;
+	padding: 1.5rem;
+}
+
+.instagram-showcase .instagram-showcase-left h3 {
+	margin-bottom: 1rem;
+	padding-bottom: 30px;
+	/* font-family: "Lato", Sans-serif; */
+	font-family: 'Segoe Script', sans-serif;
+	font-size: 58px;
+	font-weight: 900;
+	line-height: 1.2em;
+	letter-spacing: 0px;
+	word-spacing: 0em;
+	color: #16254E;
+}
+
+.instagram-showcase .instagram-showcase-left p {
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 2em;
+	letter-spacing: 0px;
+	word-spacing: 0em;
+	color: #373547;
+}
+
+/* Image Styling */
+.instagram-showcase .instagram-showcase-left .instagram-hashtag-image {
+	width: 100%; /* Makes the image responsive */
+	max-width: 500px; /* Adjust based on your design needs */
+	height: 88px; /* Maintains aspect ratio */
+	margin-bottom: 1.5rem; /* Adds spacing below the image */
+	display: block; /* Ensures the image is treated as a block element */
+}
+
+/* Instagram Slider Container */
+.instagram-showcase .instagram-showcase-slider {
+	flex: 1;
+}
+
+.instagram-showcase .instagram-showcase-slider #slider-gallery-container {
+	max-width: 100%;
+	height: 400px;
+	overflow: hidden;
+	position: relative;
+}
+
+.instagram-showcase .instagram-showcase-slider #image-slides {
+	display: flex;
+	transition: transform 1s ease-in-out;
+	transform-style: preserve-3d;
+}
+
+.instagram-showcase .instagram-showcase-slider #image-slides>div {
+	min-width: 100%;
+	height: 100%;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+}
+
+.instagram-showcase .instagram-showcase-slider #image-slides img {
+	width: 100%;
+	height: 400px;
+	object-fit: cover;
+	border-radius: 10px;
+}
+
+.custom-image-container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  .custom-image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+/* General Footer Styles */
+.footer {
+	/*background-color: #373547;*/
+    background-color: #74BC57;
+	padding: 7rem 0rem 0rem 0rem;
+	color: #f8f9fa;
+}
+
+/* Footer Container (flexbox layout) */
+.footer-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	gap: 0.1rem;
+	margin-bottom: 3rem;
+	padding: 0rem 10rem 0rem 10rem;
+}
+
+/* Footer Boxes */
+.footer-box {
+	text-align: left;
+	color: #F2F3F6 !important;
+}
+
+/* Manually setting the width of each footer box */
+.footer-box.brand-box {
+	width: 200px;
+	/* Adjust as needed */
+}
+
+.footer-box.about-box {
+	width: 350px;
+	/* Adjust as needed */
+}
+
+.footer-box.contact-box {
+	width: 280px;
+	/* Adjust as needed */
+}
+
+.footer-box.social-box {
+	width: 200px;
+	/* Adjust as needed */
+}
+
+/* Brand Logo */
+.brand-box img {
+	max-width: 150px;
+	border-radius: 10px;
+	background: rgba(255, 255, 255, 0.2);
+	padding: 12px;
+	transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.brand-box img:hover {
+	transform: scale(1.05);
+	filter: brightness(1.1);
+}
+
+/* About Section */
+.footer-box h4 {
+	font-family: "DM Sans", Sans-serif;
+	font-size: 18px;
+	font-weight: 500;
+	text-transform: uppercase;
+	line-height: 1.2em;
+}
+
+.footer-box p {
+	font-family: "DM Sans", Sans-serif;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 1.7em;
+	letter-spacing: 0px;
+	word-spacing: 0em;
+}
+
+/* Contact Section */
+.footer-box ul {
+	padding: 0;
+	list-style: none;
+	margin: 0;
+}
+
+.footer-box ul li {
+	margin-bottom: 0.5rem;
+	font-size: 1rem;
+	font-family: "DM Sans", serif;
+}
+
+/* Social Media Icons */
+.social-box {
+	display: flex;
+	gap: 1rem;
+	margin-top: 1rem;
+}
+
+.social-icon {
+	width: 42px;
+	height: 42px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 5px 5px 5px 5px;
+	background: #78C05B;
+	transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.social-icon i {
+	color: #fff;
+	font-size: 1.3rem;
+	transition: transform 0.5s ease;
+}
+
+.social-icon:hover {
+	transform: translateY(-5px);
+	background-color: white;
+}
+
+.social-icon:hover i {
+	transform: scale(1.2);
+	color: #78C05B;
+
+}
+
+/* Bottom Footer Section */
+.bottom-footer {
+	background: #373547;
+	padding: 1.5rem 0;
+	border-top: 1px solid;
+	font-family: "DM Sans", serif;
+}
+
+.bottom-footer-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.copyright {
+	font-size: 1rem;
+	text-transform: capitalize;
+	display: flex;
+	align-items: center;
+}
+
+.copyright a {
+	color: #f8f9fa;
+	font-weight: 500;
+	text-decoration: none;
+	margin-left: 5px;
+	transition: color 0.2s ease-in-out;
+}
+
+.copyright a:hover {
+	color: #025FC9;
+}
+
+/* Footer Links Section */
+.footer-links {
+	display: flex;
+	gap: 2rem;
+}
+
+.footer-links li {
+	list-style: none;
+}
+
+.footer-links li a {
+	color: #e0e0e0;
+	font-size: 1rem;
+	font-weight: 400;
+	text-decoration: none;
+	padding: 0.5rem 1rem;
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.footer-links li a:hover {
+	background-color: #025FC9;
+	color: white;
+}
+
+.footer-links li a i {
+	font-size: 1.1rem;
+	transition: transform 0.3s ease;
+}
+
+.footer-links li a:hover i {
+	transform: translateX(5px);
+}
+
+@media (min-width: 768px) {
+	.hamburger-icon {
+		display: none;
+		/* Hide hamburger button on desktop */
+	}
+}
+/* Smartphone Media Query */
+@media (max-width: 768px) {
+
+    .nav-512834 .list-374612 {
+		display: none;
+		/* Hide the regular desktop menu */
+	}
+
+	.hamburger-icon {
+		display: block;
+		cursor: pointer;
+	}
+
+	.hamburger-icon i {
+		color: #FFF7F7;
+		font-size: 1.8rem;
+	}
+
+    /* Hero Banner Section */
+    .banner-483726 {
+        background-size: cover;
+        background-position: left;
+        padding: 2rem 1rem;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        overflow: hidden;
+    }
+
+    /* Flexbox Wrapper */
+    .banner-wrapper {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 50px;
+        gap: 20px;
+    }
+
+    /* Hero Banner Section */
+    .banner-483726 {
+        padding: 2rem 1rem; /* Reduce padding for smaller screens */
+        height: auto; /* Remove fixed height */
+        min-height: 100vh; /* Ensure it takes at least the full viewport height */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Flexbox Wrapper */
+    .banner-wrapper {
+        flex-direction: column; /* Stack columns vertically */
+        align-items: center;
+        justify-content: center;
+        padding-top: 0; /* Remove top padding */
+        text-align: center; /* Center-align text */
+		padding-top: 150px;
+    }
+
+    /* Left Column - Text Styling */
+    .left-827364 {
+        order: 2; /* Move text below images */
+        margin-top: 2rem; /* Add spacing between columns */
+        flex: none; /* Reset flex for mobile */
+    }
+
+    .left-827364 h1,
+    .left-827364 h2 {
+        font-size: 48px; /* Reduce font size for mobile */
+        line-height: 1.2em; /* Adjust line height */
+		color: white;
+    }
+
+    .left-827364 p {
+        font-size: 18px; /* Reduce font size for mobile */
+        margin-top: 0.5rem; /* Add spacing */
+		color: white;
+    }
+
+    /* Right Column - Image Container */
+    .right-573812 {
+        width: 300px; /* Reduce size for mobile */
+        height: 300px;
+        margin: 0 auto; /* Center the circle */
+        flex: none; /* Reset flex for mobile */
+    }
+
+    /* Floating Images */
+    .float-981273 {
+        width: auto; /* Ensure images scale properly */
+    }
+
+    /* Image 1 */
+    .img-267845 {
+        top: 10%; /* Adjust positioning */
+        left: 5%;
+        width: 150px; /* Reduce size for mobile */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    /* Image 2 */
+    .img-745129 {
+        bottom: 10%; /* Adjust positioning */
+        right: 5%;
+        width: 200px; /* Reduce size for mobile */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    /* Floating Background SVGs */
+    .floating-svg {
+        width: 50px; /* Reduce size for mobile */
+        opacity: 0.5; /* Make SVGs less prominent */
+    }
+
+    /* Individual Positioning for SVGs */
+    .svg-1 { top: 10%; left: 5%; }
+    .svg-2 { top: 15%; right: 5%; }
+    .svg-3 { bottom: 5%; left: 5%; }
+    .svg-4 { bottom: 10%; right: 30%; }
+    .svg-5 { bottom: 32%; right: 1%;} /* Adjust size */
+	.floating-svg.svg-5{
+		width: 100px !important;
+	}
+	.choose-us-section {
+		padding: 80px 20px 40px 20px;
+		/* Reduced padding for smaller screens */
+	}
+
+	.choose-us-section .section-title {
+        font-size: 42px;
+        line-height: 1.1em;
+        margin-bottom: 1.5rem;
+	}
+
+	.owl-carousel {
+		padding: 0 20px;
+		/* Reduced side padding */
+		gap: 10px;
+		flex-wrap: nowrap;
+		/* Ensures smooth horizontal scrolling */
+		overflow-x: auto;
+		/* Enables horizontal scroll if needed */
+		scroll-snap-type: x mandatory;
+		/* Smooth scrolling */
+		-webkit-overflow-scrolling: touch;
+	}
+
+	.owl-carousel .carousel-item {
+		min-width: 80%;
+		/* Makes each item more prominent */
+		flex: 0 0 auto;
+		scroll-snap-align: center;
+		/* Ensures items snap correctly */
+	}
+
+	.carousel-content {
+		padding: 20px;
+		transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+	}
+
+	.carousel-content img {
+		width: 80px;
+		/* Adjusted for better fit */
+		height: 80px;
+		margin-bottom: 15px;
+	}
+
+	.carousel-content h3 {
+		font-size: 1rem;
+		/* Slightly reduced */
+		font-weight: 600;
+	}
+
+	/* Touch-friendly hover effect */
+	.carousel-content:active {
+		transform: scale(1.05);
+		box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+	}
+
+	/* Adjust Section Padding */
+	.flavours-section {
+		padding: 3rem 1rem 6rem 1rem !important;
+	}
+
+	/* Reduce Section Heading Size */
+	.flavours-section .flavours-section-heading {
+		font-size: 42px;
+		line-height: 1.1em;
+		margin-bottom: 1.5rem;
+	}
+
+	/* Stack Cards Vertically */
+	.flavour-card {
+		margin-bottom: 1.5rem;
+		/* Add space between stacked cards */
+	}
+
+	/* Adjust Image Sizing */
+	.flavour-card-img-top {
+		width: 100%;
+		/* Ensure image takes full width of card */
+		height: auto;
+		/* Maintain aspect ratio */
+	}
+
+	/* Optimize Card Body Padding */
+	.flavour-card-body {
+		padding: 1.5rem 1rem;
+		/* Add sufficient padding for mobile */
+	}
+
+	/* Adjust Title Font Size */
+	.flavour-card-title {
+		font-size: 24px;
+	}
+
+	/* Adjust Text Font Size */
+	.flavour-card-text {
+		font-size: 13px;
+		line-height: 1.3em;
+		padding: 0.8rem;
+	}
+
+	.flavour-section-heading {
+        font-size: 48px;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .flavour-video-container {
+        padding: 0;
+    }
+
+    .flavour-video {
+        width: 100%;
+        border-radius: 5px;
+    }
+
+    .flavour-section-review-container {
+        padding: 2rem 1rem;
+    }
+
+    .flavour-review-flexbox {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .flavour-review-logo-img {
+        max-width: 80px;
+    }
+
+    .flavour-review-text {
+        font-size: 1.4em;
+        padding: 0 10px;
+    }
+
+    .flavour-stars-rating {
+        font-size: 0.9rem;
+    }
+
+    .flavour-reviewer-name {
+        font-size: 1.2rem;
+    }
+
+	.instagram-showcase {
+		padding: 3rem 1rem;
+		text-align: center;
+	}
+
+	.instagram-showcase .container {
+		flex-direction: column;
+		align-items: center;
+	}
+
+		/* Adjust Left Content */
+		.instagram-showcase .instagram-showcase-left {
+			max-width: 100%;
+			padding: 1rem;
+		}
+	
+		.instagram-showcase .instagram-showcase-left h3 {
+			font-size: 42px;
+			padding-bottom: 15px;
+		}
+	
+		.instagram-showcase .instagram-showcase-left p {
+			font-size: 18px;
+			line-height: 1.6em;
+		}
+	
+		/* Image Styling for Mobile */
+		.instagram-showcase .instagram-showcase-left .instagram-hashtag-image {
+			max-width: 100%; /* Ensures the image doesn't overflow its container */
+			height: auto; /* Maintains aspect ratio */
+			margin-bottom: 1rem; /* Adds spacing below the image */
+		}
+
+	/* Adjust Image Slider */
+	.instagram-showcase .instagram-showcase-slider {
+		width: 100%;
+		margin-top: 2rem;
+	}
+
+	.instagram-showcase .instagram-showcase-slider #slider-gallery-container {
+		height: 280px;
+	}
+
+	.instagram-showcase .instagram-showcase-slider #image-slides img {
+		height: 280px;
+		border-radius: 8px;
+	}
+
+	.footer {
+		padding: 4rem 1rem 0rem 1rem;
+	}
+
+	/* Adjust Footer Container */
+	.footer-container {
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		padding: 0 2rem;
+		gap: 2rem;
+	}
+
+	/* Footer Boxes */
+	.footer-box {
+		width: 100% !important;
+	}
+
+	.brand-box {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+	}
+
+	.brand-box img {
+		max-width: 120px;
+		padding: 10px;
+	}
+
+	/* About Section */
+	.footer-box h4 {
+		font-size: 16px;
+	}
+
+	.footer-box p {
+		font-size: 14px;
+		line-height: 1.5em;
+	}
+
+	/* Contact Section */
+	.footer-box ul li {
+		font-size: 14px;
+	}
+
+	/* Social Media Icons */
+	.social-box {
+		justify-content: center;
+		gap: 0.8rem;
+	}
+
+	.social-icon {
+		width: 38px;
+		height: 38px;
+	}
+
+	.social-icon i {
+		font-size: 1.1rem;
+	}
+
+	/* Bottom Footer */
+	.bottom-footer-container {
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		gap: 1rem;
+		padding: 0 1rem;
+	}
+
+	.copyright {
+		font-size: 14px;
+		flex-direction: column;
+	}
+
+	/* Center Align Footer Links */
+	.footer-links {
+		flex-direction: column;
+		align-items: center;
+		/* Ensures perfect center alignment */
+		text-align: center;
+		gap: 1rem;
+		padding: 0;
+		margin: 0 auto;
+		/* Ensures it remains centered */
+	}
+
+	.footer-links li a {
+		font-size: 14px;
+		padding: 0.4rem 0.8rem;
+	}
+
+	.footer-links li a i {
+		font-size: 1rem;
+	}
+}
+
+
+/* Tablet-Specific Styles (600px - 1024px) */
+@media (min-width: 600px) and (max-width: 1024px) {
+    
+    /* General Layout Adjustments */
+    body {
+        font-size: 1rem; /* Ensure readability */
+    }
+    
+    /* Header & Navigation */
+    .navbar {
+        padding: 0.5rem 3rem;
+    }
+    
+    .navbar .menu {
+        display: flex;
+        flex-direction: row; /* Ensure horizontal alignment */
+        gap: 1.5rem;
+    }
+    
+    .navbar .menu li {
+        font-size: 1rem;
+    }
+
+    /* Hero Banner Section */
+    .banner-483726 {
+        background-position: cover;
+        background-repeat: no-repeat;
+        padding: 3rem 6rem; /* Reduce padding for tablets */
+        height: 80vh; /* Adjust height for tablets */
+    }
+
+    /* Flexbox Wrapper */
+    .banner-wrapper {
+        max-width: 900px; /* Adjust max-width for tablets */
+        padding-top: 60px; /* Reduce top padding */
+    }
+
+    /* Left Column - Text Styling */
+    .left-827364 h1,
+    .left-827364 h2 {
+        font-size: 72px; /* Reduce font size for tablets */
+        line-height: 1.1em; /* Adjust line height */
+    }
+
+    .left-827364 p {
+        font-size: 20px; /* Reduce font size for tablets */
+    }
+
+    /* Right Column - Image Container */
+    .right-573812 {
+        width: 400px; /* Adjust size for tablets */
+        height: 400px;
+    }
+
+    /* Floating Images */
+    .img-267845 {
+        top: 5%; /* Adjust positioning */
+        left: 5%;
+        width: 180px; /* Adjust size for tablets */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .img-745129 {
+        bottom: 5%; /* Adjust positioning */
+        right: 5%;
+        width: 280px; /* Adjust size for tablets */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    /* Floating Background SVGs */
+    .floating-svg {
+        width: 70px; /* Adjust size for tablets */
+    }
+
+    /* Individual Positioning for SVGs */
+    .svg-1 { top: 15%; left: 5%; }
+    .svg-2 { top: 20%; right: 10%; }
+    .svg-3 { bottom: 5%; left: 5%; }
+    .svg-4 { bottom: 1%; right: 40%; }
+    .svg-5 { bottom: 5%; right: 5%;} /* Adjust size */
+
+    /* Services Section */
+    .services-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for better spacing */
+        gap: 2rem;
+    }
+
+    .services-box {
+        padding: 1.5rem;
+    }
+
+    /* Blog Section */
+    .blog-section {
+        grid-template-columns: repeat(2, 1fr); /* 2-column layout */
+    }
+
+    .blog-box {
+        padding: 1.5rem;
+    }
+
+    /* Testimonials Section */
+    .testimonial-slider {
+        padding: 2rem;
+    }
+
+    .testimonial-box {
+        padding: 1.5rem;
+        text-align: center;
+    }
+
+    /* Footer */
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer .footer-box {
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+
+    .footer .social-icons {
+        justify-content: center;
+    }
+
+
+    .flavour-section-heading {
+        font-size: 64px;
+        text-align: center;
+        padding: 30px;
+    }
+
+    .flavour-video-container {
+        padding: 5px;
+    }
+
+    .flavour-video {
+        width: 100%;
+    }
+
+    .flavour-section-review-container {
+        padding: 3rem 2rem;
+    }
+
+    .flavour-review-flexbox {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .flavour-reviewer-text {
+        padding-left: 0;
+    }
+
+    .flavour-review-text {
+        font-size: 1.8em;
+        padding-right: 0;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Active State Styles */
+.nav-512834 ul li a.active {
+    color: #FFE000; /* Highlight color */
+    font-weight: 600;
+    position: relative;
+}
+
+/* Active Indicator (Underline Effect) */
+.nav-512834 ul li a.active::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    width: 50%;
+    height: 2px;
+    background: #FFE000;
+    transform: translateX(-50%);
+    transition: width 0.3s ease-in-out;
+}
+
+/* Mobile Menu Active State */
+.mobile-nav ul li a.active {
+    color: #FFE000;
+    font-weight: 600;
+}
+
+/* Fix for sections not triggering active state correctly */
+section {
+    scroll-margin-top: 100px; /* Prevents section from being hidden under sticky header */
+    min-height: 10vh; /* Ensures sections are large enough for IntersectionObserver */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
