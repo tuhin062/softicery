@@ -339,8 +339,9 @@ body {
 /* Container for the entire section */
 .choose-us-section {
 	width: 100%;
-	padding: 160px 40px 60px 40px;
+	padding: 100px 40px 60px 40px;
 	/* Padding added to the left and right */
+    background-color: #86ac00;
 }
 
 .choose-us-section .section-title {
