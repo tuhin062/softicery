@@ -13,6 +13,14 @@
     font-style: normal;
   }
 
+  @font-face {
+    font-family: 'Damar'; /* Custom name for the font */
+    src: url('/assets/fonts/damar.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 /* Hides the scrollbar while keeping scrolling functionality */
 html,
 body {
@@ -348,14 +356,23 @@ body {
 	font-size: 58px;
 	/* font-weight: 900;*/
 	line-height: 1.2em;
-	letter-spacing: 0px;
+	letter-spacing: 7px;
 	word-spacing: 0em;
 	text-align: center;
-	color: #373547;
+	/*color: #373547;*/
+    color: white;
 	margin-bottom: 74px;
 	/* font-family: "Open Sans", "Helvetica Neue", sans-serif; */
-	font-family: 'Segoe Script', sans-serif;
-	font-weight: bolder;
+	/*font-family: 'Segoe Script', sans-serif;*/
+    font-family: Damar;
+
+    text-shadow:  
+    4px 4px 0 #ff3377,  /* Bottom-right shadow (same as background) */
+    -1px -1px 0 white, /* Top-left white outline */
+    1px -1px 0 white,  
+    -1px 1px 0 white,  
+    1px 1px 0 white;
+
 }
 
 .owl-carousel {
@@ -398,7 +415,7 @@ body {
 .carousel-content h3 {
 	font-size: 1.2rem;
 	font-weight: 700;
-	color: #333;
+	color: white;
 	margin-top: 10px;
 	letter-spacing: 0.5px;
 	text-align: center;
@@ -511,9 +528,10 @@ body {
     font-family: "DM Sans", sans-serif;
     font-size: 1rem;
     font-weight: 500;
-    color: #5A5A5A;
+    color: black;
     line-height: 1.5;
     transition: color 0.3s ease;
+    margin-top: 20px;
 }
 
 .signature-flavour-card:hover .signature-flavour-text {
@@ -546,6 +564,7 @@ body {
     position: relative;
     padding: 3rem 0;
     min-height: 400px;
+    background: #f0bc06;
 }
 
 /* Heading */
@@ -562,7 +581,8 @@ body {
     font-size: 4rem;
     font-weight: 900;
     line-height: 1.2em;
-    color: #373547;
+    /*color: #373547;*/
+    color: #f0bc06;
     padding: 40px 50px;
 }
 
@@ -600,7 +620,9 @@ body {
     left: 0;
     width: 100%;
     height: 50%;
-    background: linear-gradient(90deg, #78C05B 5%, #FB61660D 0%);
+    /*background: linear-gradient(90deg, #78C05B 5%, #FB61660D 0%);*/
+        background: linear-gradient(90deg, #a6e204 5%, #a6e204 0%);
+
 }
 
 /* Review Section */
@@ -759,7 +781,8 @@ body {
 /* General Footer Styles */
 .footer {
 	/*background-color: #373547;*/
-    background-color: #74BC57;
+    /*background-color: #74BC57;*/
+    background-color: #ff7200;
 	padding: 7rem 0rem 0rem 0rem;
 	color: #f8f9fa;
 }
@@ -854,54 +877,64 @@ body {
 }
 
 .social-icon {
-	width: 42px;
-	height: 42px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	border-radius: 5px 5px 5px 5px;
-	background: #78C05B;
-	transition: transform 0.3s ease, background-color 0.3s ease;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    background: white; /* White box for contrast */
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .social-icon i {
-	color: #fff;
-	font-size: 1.3rem;
-	transition: transform 0.5s ease;
+    color: #FFA726; /* Light Orange Icon */
+    font-size: 1.3rem;
+    transition: transform 0.5s ease, color 0.3s ease;
 }
 
 .social-icon:hover {
-	transform: translateY(-5px);
-	background-color: white;
+    transform: translateY(-5px);
+    background-color: #f4f4f4; /* Light gray for a subtle effect */
 }
 
 .social-icon:hover i {
-	transform: scale(1.2);
-	color: #78C05B;
-
+    transform: scale(1.2);
+    color: #E65100; /* Deep orange for a professional hover look */
 }
+
 
 /* Bottom Footer Section */
 .bottom-footer {
 	background: #373547;
-	padding: 1.5rem 0;
-	border-top: 1px solid;
+	/*border-top: 1px solid;*/
 	font-family: "DM Sans", serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    padding-top: 10px;
 }
 
+/* Centering the container */
 .bottom-footer-container {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	flex-direction: row;
+	text-align: center;
 	max-width: 1200px;
-	margin: 0 auto;
+	width: 100%;
+    padding-top: 10xpx;
 }
 
+/* Copyright Section */
 .copyright {
 	font-size: 1rem;
 	text-transform: capitalize;
 	display: flex;
 	align-items: center;
+	justify-content: center;
+	margin-bottom: 10px;
 }
 
 .copyright a {
@@ -919,6 +952,8 @@ body {
 /* Footer Links Section */
 .footer-links {
 	display: flex;
+	justify-content: center;
+	align-items: center;
 	gap: 2rem;
 }
 
@@ -952,6 +987,7 @@ body {
 .footer-links li a:hover i {
 	transform: translateX(5px);
 }
+
 
 @media (min-width: 768px) {
 	.hamburger-icon {
