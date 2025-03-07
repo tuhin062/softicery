@@ -20,7 +20,9 @@
       <!-- Owl Carousel CSS -->
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.carousel.min.css">
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/assets/owl.theme.default.min.css">
-   
+      <!--swiper js-->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+
       <!-- Google Fonts (Optimized Single Request) -->
       <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@100..1000&family=Open+Sans:wght@300..800&family=Lato:wght@100;300;400;700;900&family=Caveat:wght@400..700&family=Alex+Brush&family=Dancing+Script:wght@400..700&family=Kaushan+Script&family=Parisienne&family=Sacramento&family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
    
@@ -184,56 +186,66 @@
             </div>
             <!-- Gradient Background -->
             <div class="flavour-gradient-background"></div>
-            <!-- Review Section -->
-            <div class="flavour-section-review-container">
-               <div class="owl-carousel owl-theme">
-                  <!-- Review 1 -->
-                  <div class="flavour-review-flexbox">
-                     <!-- Reviewer Logo -->
-                     <div class="flavour-reviewer-logo">
-                        <img src="https://static.live.templately.com/woocommerce/2022/11/a7358f96-es-avater01.png" 
-                           alt="Reviewer Logo" class="flavour-review-logo-img">
-                     </div>
-                     <!-- Review Text -->
-                     <div class="flavour-reviewer-text">
-                        <div class="flavour-review-text">
-                           "Trusted to deliver the world’s best Ice Cream in local communities across the country."
-                        </div>
-                        <div class="flavour-stars-rating">
-                           <i class="fas fa-star"></i>
-                           <i class="fas fa-star"></i>
-                           <i class="fas fa-star"></i>
-                           <i class="fas fa-star"></i>
-                           <i class="fas fa-star"></i>
-                        </div>
-                        <div class="flavour-reviewer-name">Saptarshi Dasgupta</div>
-                     </div>
-                  </div>
-                  <!-- Review 2 -->
-                  <div class="flavour-review-flexbox">
-                     <!-- Reviewer Logo -->
-                     <div class="flavour-reviewer-logo">
-                        <img src="https://www.w3schools.com/w3images/avatar6.png" 
-                           alt="Reviewer Logo" class="flavour-review-logo-img">
-                     </div>
-                     <!-- Review Text -->
-                     <div class="flavour-reviewer-text">
-                        <div class="flavour-review-text">
-                           "Amazing flavors and excellent service! Highly recommended for all ice cream lovers."
-                        </div>
-                        <div class="flavour-stars-rating">
-                           <i class="fas fa-star"></i>
-                           <i class="fas fa-star"></i>
-                           <i class="fas fa-star"></i>
-                           <i class="fas fa-star"></i>
-                           <i class="fas fa-star-half-alt"></i>
-                        </div>
-                        <div class="flavour-reviewer-name">Priya Sharma</div>
-                     </div>
-                  </div>
-                  <!-- Add more reviews here as needed -->
-               </div>
-            </div>
+
+
+
+<!-- Testimonial Section -->
+<section class="testimonial-section">
+   <div class="slider">
+       
+
+         <img src="assets/pictures/Why-choos-us.png" alt="Descriptive Alt Text" class="custom-image">
+
+
+
+     <!-- Navigation Buttons -->
+     <div class="buttons">
+       <div class="previous"></div>
+       <div class="next"></div>
+     </div>
+ 
+     <!-- Slide 1 -->
+     <div class="slide">
+       <div class="testimonial">
+         <blockquote>
+           “ Softy Icecream is the ultimate sweet treat! Smooth, creamy, and packed with delicious flavors, it never disappoints. The quality is top-notch, and the service is always warm and friendly. Whether it’s a classic favorite or a new flavor adventure, every visit is a joy. A must-try for ice cream lovers! ”
+         </blockquote>
+         <p class="author">
+            Rajesh Sharma
+           <span>Engineer</span>
+         </p>
+       </div>
+       <div class="slider-img">
+         <img src="https://alcs-slider.netlify.app/images/image-tanya.jpg" alt="Author Image">
+       </div>
+     </div>
+ 
+     <!-- Slide 2 -->
+     <div class="slide">
+       <div class="testimonial">
+         <blockquote>
+           “ Softy Icecream is pure delight! Creamy, rich, and bursting with flavor, every bite is a treat. The variety is amazing, from classic vanilla to unique flavors. The staff is friendly, and the ambiance is perfect. Definitely my go-to spot for a sweet, refreshing treat. Highly recommended! ”
+         </blockquote>
+         <p class="author">
+            Priya Mehta
+           <span>Teacher</span>
+         </p>
+       </div>
+       <div class="slider-img">
+         <img src="https://alcs-slider.netlify.app/images/image-john.jpg" alt="Author Image">
+       </div>
+     </div>
+ 
+   </div>
+ </section>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+                                                     
          </div>
       </section>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 160">
@@ -359,11 +371,13 @@
 
       <!-- Owl Carousel -->
       <script src="https://cdn.jsdelivr.net/npm/owl.carousel@2.3.4/dist/owl.carousel.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
       <!-- Custom Scripts -->
       <script src="assets/js/active-section-highlight.js"></script>
       <script src="assets/js/mobile-nav.js"></script>
       <script src="assets/js/floating-animation.js"></script>
-      <script src="assets/js/owl-carousel-init.js"></script>
+      <script src="assets/js/owl-carousel-init 2.js"></script>
+      <script src="assets/js/external.js"></script>
    </body>
 </html>

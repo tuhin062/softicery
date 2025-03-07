@@ -347,32 +347,27 @@ body {
 /* Container for the entire section */
 .choose-us-section {
 	width: 100%;
-	padding: 150px 40px 50px 40px;
-	/* Padding added to the left and right */
+	padding: 75px 40px 10px 40px;
     background-color: #02c7e4 ;
 }
 
-.choose-us-section .section-title {
-	font-size: 58px;
-	/* font-weight: 900;*/
-	line-height: 1.2em;
-	letter-spacing: 7px;
-	word-spacing: 0em;
-	text-align: center;
-	/*color: #373547;*/
-    color: white;
-	margin-bottom: 74px;
-	/* font-family: "Open Sans", "Helvetica Neue", sans-serif; */
-	/*font-family: 'Segoe Script', sans-serif;*/
-    font-family: Damar;
+/* Centering the image container */
+.custom-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 250px; /* Adjust height as needed */
+    margin-bottom: 40px; /* Space between image and carousel */
+}
 
-    text-shadow:  
-    4px 4px 0 #ff3377,  /* Bottom-right shadow (same as background) */
-    -1px -1px 0 white, /* Top-left white outline */
-    1px -1px 0 white,  
-    -1px 1px 0 white,  
-    1px 1px 0 white;
-
+/* Image styling */
+.custom-image {
+    max-width: 100%;
+    height: auto;
+    width: 500px; /* Default width */
+    max-height: 200px; /* Ensuring a good proportion */
+    object-fit: contain; /* Ensures the image maintains aspect ratio */
 }
 
 .owl-carousel {
@@ -625,63 +620,125 @@ body {
 
 }
 
-/* Review Section */
-
-.flavour-section-review-container {
-    padding: 5rem 5rem;
+/* Testimonial Slider Styles */
+.testimonial-section {
+    position: relative;
+    z-index: 9999; /* Increase z-index to bring it to the front */
+    margin-top: 10px;
 }
 
-/* Flexbox Layout */
-.flavour-review-flexbox {
-    display: flex;
-    justify-content: flex-start;
+/* Main slider container */
+.slider {
+    position: relative;
+    overflow: hidden;
+    /* … other styling properties … */
+}
+
+/* Navigation Buttons */
+.slider .buttons {
+    position: absolute;
+    right: 50%;
+    top: 424px;
+    width: 80px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 50px;
+    transform: translateX(50%);
+    z-index: 1;
+}
+.slider .buttons .previous,
+.slider .buttons .next {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+.slider .buttons .previous {
+    left: 0;
+    background-image: url('https://alcs-slider.netlify.app/images/icon-prev.svg');
+}
+.slider .buttons .next {
+    right: 0;
+    background-image: url('https://alcs-slider.netlify.app/images/icon-next.svg');
+}
+
+/* Slide styling */
+.slide {
+    display: none; /* All slides are hidden by default */
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    gap: 1.5rem;
-}
-
-/* Reviewer Logo */
-.flavour-reviewer-logo {
-    flex: 0 0 auto;
-    max-width: 120px;
-}
-
-.flavour-review-logo-img {
-    width: 100%;
-    height: auto;
-    border-radius: 50%;
-}
-
-/* Review Text */
-.flavour-reviewer-text {
-    flex: 1;
+    justify-content: center;
+    flex-direction: row; /* Arrange in a row */
     text-align: left;
-    padding-left: 1rem;
+    margin: 0 auto;
+    padding: 16px;
+    position: relative;
 }
 
-.flavour-review-text {
-    font-family: "Open Sans", sans-serif;
-    font-size: 1.5em;
-    line-height: 1.4;
-    margin-bottom: 1rem;
+/* Testimonial text and author */
+.slide .testimonial {
+    padding: 32px 51px;
+    background-image: url('https://alcs-slider.netlify.app/images/pattern-quotes.svg');
+    background-repeat: no-repeat;
+    background-position: top;
+    width: 60%; /* Occupies 60% of the slide width */
+}
+.slide .testimonial blockquote {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 24px;
+    margin-bottom: 36px;
     color: white;
 }
-
-/* Stars Rating */
-.flavour-stars-rating {
-    font-size: 1rem;
-    color: #FFB400;
+.slide .testimonial .author {
+    font-size: 15px;
+    font-weight: 700;
     color: white;
-    margin-bottom: 0.5rem;
+}
+.slide .testimonial .author span {
+    display: block;
+    color: white;
+    font-weight: 500;
 }
 
-/* Reviewer Name */
-.flavour-reviewer-name {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #ED2433;
+/* Reviewer image with overlap */
+.slide .slider-img {
+    width: 40%; /* Occupies remaining 40% */
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*background-image: url('https://alcs-slider.netlify.app/images/pattern-bg.svg');*/
+    background-image: url('../pictures/category-msk-imgs-removebg-preview.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    margin-left: -50px; /* Negative margin to overlap testimonial text */
 }
+.slide .slider-img img {
+    width: 235px;
+    display: block;
+    border-radius: 130px;
+    box-shadow: 0px 16px 40px rgba(135, 105, 210, 0.4);
+}
+
+/* Active slide styling */
+.slide.active {
+    display: flex;
+    opacity: 1;
+    transform: translateX(0) scale(1);
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+  
+
+  
+  
+  
+  
+  
+  
+  
 
 /* Instagram Section Styles */
 .instagram-showcase {
@@ -766,20 +823,6 @@ body {
 	object-fit: cover;
 	border-radius: 10px;
 }
-
-.custom-image-container {
-    width: 50%;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    margin-left: 350px;
-  }
-  
-  .custom-image {
-    width: 100%;
-    height: auto;
-    display: block;
-  }
   
 /* General Footer Styles */
 .footer {
