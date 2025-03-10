@@ -1258,13 +1258,6 @@ body {
 		padding: 3rem 1rem 6rem 1rem !important;
 	}
 
-	/* Reduce Section Heading Size */
-	.flavours-section .flavours-section-heading {
-		font-size: 42px;
-		line-height: 1.1em;
-		margin-bottom: 1.5rem;
-	}
-
 	/* Stack Cards Vertically */
 	.flavour-card {
 		margin-bottom: 1.5rem;
