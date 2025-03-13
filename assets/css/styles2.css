@@ -425,6 +425,7 @@ body {
 .signature-flavours-section {
     text-align: center;
     /*background: linear-gradient(180deg, #FBFBFB 0%, #F1F1F1 100%);*/
+    background-color: #ffefe0;
 }
 
 /* Section Heading */
@@ -475,7 +476,6 @@ body {
     max-width: 390px;
     position: relative;
     border-radius: 16px;
-    background: #F4F4F4;;
     transition: transform 0.4s ease;
     overflow: hidden;
     cursor: pointer;
