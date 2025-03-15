@@ -1,65 +1,119 @@
-gsap.registerPlugin(ScrollTrigger);
-
-let tl = gsap.timeline({
-    scrollTrigger: {
-        trigger: ".flavour-showcase-section",
-        start: "top 80%",  
-        end: "bottom 20%", 
-        scrub: 1.5, 
-    }
-});
-
-// Background Image Animation
-tl.from(".custom-image-container", {
-    opacity: 0,
-    scale: 0.85,
-    y: -50,
-    duration: 1.2,
-    ease: "power3.out"
-});
-
-// **Jaw-Dropping Video Animation (Fixed)**
-tl.from(".flavour-video-container", {
-    opacity: 0, 
-    scale: 0.85,  
-    x: "-12vw",  
-    rotateY: -12, 
-    skewX: 3,    
-    duration: 1.8,
-    ease: "expo.out"
-}, "-=0.7");
-
-// Gradient Background Smooth Reveal
-tl.from(".flavour-gradient-background", {
-    height: "0%",
-    opacity: 0,
-    duration: 1.5,
-    ease: "power2.out"
-}, "-=0.7");
-
-// Custom Testimonial Image
-tl.from(".custom-image-container-testimonial img", {
-    opacity: 0,
-    x: -100,
-    rotateZ: -4, 
-    duration: 1.6,
-    ease: "power3.out"
-}, "-=1.0");
-
-
-gsap.utils.toArray(".slide").forEach((slide, i) => {
-    gsap.from(slide, {
-        opacity: 0,
-        x: i % 2 === 0 ? -50 : 50,  // Slightly reduced movement for smoother entry
-        scale: 0.97,  // Subtle scale effect for depth
-        duration: 1.0,  // Faster entry animation
-        ease: "power2.out",  // Balanced easing for a professional feel
+// Wait until DOM is fully loaded
+document.addEventListener("DOMContentLoaded", function () {
+    gsap.registerPlugin(ScrollTrigger);
+  
+    // 🌊 Bottom SVG Wave Animation (Subtle Movement)
+    gsap.to(".signature-svg-bottom path", {
+      y: 20, // Moves slightly up/down for a smooth effect
+      duration: 3,
+      ease: "power1.inOut",
+      scrollTrigger: {
+        trigger: ".signature-svg-bottom",
+        start: "top bottom",
+        end: "bottom top",
+        scrub: true,
+      },
+    });
+  
+    // 🍦 Flavour Showcase Title Image Animation
+    gsap.from(".custom-image-container img", {
+      opacity: 0,
+      y: 50, // Slides up smoothly
+      duration: 1,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: ".custom-image-container",
+        start: "top 80%",
+        end: "top 50%",
+        scrub: false,
+      },
+    });
+  
+    gsap.from(".flavour-video-container", {
+        opacity: 0, 
+        scale: 0.85,  
+        x: "-12vw",  
+        rotateY: -12, 
+        skewX: 3,    
+        duration: 1.8,
+        ease: "expo.out",
         scrollTrigger: {
-            trigger: slide,
-            start: "top 98%",  // Earlier trigger point
-            end: "top 80%",   // Ends animation in a shorter range
-            scrub: false,  // Instant animation instead of smooth scroll syncing
+            trigger: ".flavour-video-container",
+            start: "top 85%",
+            end: "top 50%",
             toggleActions: "play none none reverse"
         }
     });
-});
+    
+  
+    // 🎨 Gradient Background Animation
+    gsap.from(".flavour-gradient-background", {
+      opacity: 0,
+      duration: 1.5,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: ".flavour-gradient-background",
+        start: "top 90%",
+        end: "top 60%",
+        scrub: false,
+      },
+    });
+  
+    // 🏆 Testimonial Title Animation
+    gsap.from(".custom-image-container-testimonial img", {
+      opacity: 0,
+      x: 50, // Slides from the right
+      duration: 1,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: ".custom-image-container-testimonial",
+        start: "top 85%",
+        end: "top 55%",
+        scrub: false,
+      },
+    });
+  
+    // 📝 Testimonial Content Animation (Staggered Effect)
+    gsap.from(".testimonial", {
+      opacity: 0,
+      y: 30, // Moves slightly up
+      duration: 1.2,
+      ease: "power2.out",
+      stagger: 0.2, // Each testimonial enters with a small delay
+      scrollTrigger: {
+        trigger: ".testimonial-section",
+        start: "top 80%",
+        end: "top 50%",
+        scrub: false,
+      },
+    });
+  
+    // 👤 Testimonial Images (Opposite Direction Effect)
+    gsap.from(".slider-img img", {
+      opacity: 0,
+      x: -50, // Moves from the left
+      duration: 1.2,
+      ease: "power2.out",
+      stagger: 0.2,
+      scrollTrigger: {
+        trigger: ".testimonial-section",
+        start: "top 80%",
+        end: "top 50%",
+        scrub: false,
+      },
+    });
+  
+    // 🌊 Top SVG Wave Animation
+    gsap.to(".testimonial-section + svg path", {
+      y: 20, // Moves slightly down for smooth transition
+      duration: 3,
+      ease: "power1.inOut",
+      scrollTrigger: {
+        trigger: ".testimonial-section + svg",
+        start: "top bottom",
+        end: "bottom top",
+        scrub: true,
+      },
+    });
+  });
+  
