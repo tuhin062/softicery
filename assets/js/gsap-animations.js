@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
   
     // 🌊 Bottom SVG Wave Animation (Subtle Movement)
     gsap.to(".signature-svg-bottom path", {
-      y: 20, // Moves slightly up/down for a smooth effect
+      y: 5, // Moves slightly up/down for a smooth effect
       duration: 3,
       ease: "power1.inOut",
       scrollTrigger: {

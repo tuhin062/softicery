@@ -4,7 +4,6 @@ let tlInstagram = gsap.timeline({
     scrollTrigger: {
         trigger: ".instagram-showcase",
         start: "top 80%",  // Animation starts earlier for better visibility
-        end: "bottom 50%", // Ensures all elements finish animating before leaving the viewport
         scrub: 1,          
     }
 });
