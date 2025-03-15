@@ -358,6 +358,18 @@ body {
     align-items: center;
     margin-bottom: 40px; /* Space between image and carousel */
 }
+.custom-image-container-choose-us{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px; /* Space between image and carousel */
+}
+.custom-image-container-flavour-types{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px; /* Space between image and carousel */
+}
 .custom-image-container-testimonial{
     display: flex;
     margin-top: 40px; /* Space between image and carousel */
