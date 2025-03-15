@@ -348,7 +348,7 @@ body {
 .choose-us-section {
 	width: 100%;
 	padding: 75px 40px 10px 40px;
-    background-color: #02c7e4 ;
+    background-color: #af57ed ;
 }
 
 /* Centering the image container */
@@ -379,6 +379,13 @@ body {
 
 /* Image styling */
 .custom-image {
+    max-width: 100%;
+    height: auto;
+    width: 550px; /* Default width */
+    max-height: 200px; /* Ensuring a good proportion */
+    object-fit: contain; /* Ensures the image maintains aspect ratio */
+}
+.custom-image-choose-us{
     max-width: 100%;
     height: auto;
     width: 550px; /* Default width */
