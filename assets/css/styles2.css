@@ -373,7 +373,7 @@ body {
 .custom-image-container-testimonial{
     display: flex;
     margin-top: 40px; /* Space between image and carousel */
-    margin-left: 45px;
+    margin-left: 28px;
     height: 75px;
 }
 
@@ -939,9 +939,9 @@ body {
 /* Food Image - Behind the Wave */
 .food-image {
     position: absolute;
-    bottom: -92px;
+    bottom: 58px;
     left: 18%;
-    transform: translateX(-50%) scale(0.7);
+    transform: translateX(-47%) scale(0.85);
     z-index: 1;
     max-width: 630px;
 }

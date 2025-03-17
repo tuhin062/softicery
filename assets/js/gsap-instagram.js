@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
         ease: "power3.out",
         scrollTrigger: {
             trigger: ".instagram-showcase-left",
-            start: "top 85%",
+            start: "top 92%",
             scrub: 1
         }
     });
