@@ -934,7 +934,6 @@ body {
     position: relative;
     width: 100%;
     height: auto; /* Auto height for responsiveness */
-    margin-top: 50px; /* Slight overlap to blend naturally */
 }
 
 /* Food Image - Behind the Wave */
@@ -947,6 +946,7 @@ body {
     max-width: 630px;
 }
 
+
 /* Wave Image - Top Layer */
 .wave-image {
     position: relative;
@@ -958,6 +958,8 @@ body {
   
 /* General Footer Styles */
 .footer {
+    position: relative;
+    z-index: 2;
 	/*background-color: #373547;*/
     /*background-color: #74BC57;*/
     background-color: #ff7200;
@@ -1018,9 +1020,9 @@ body {
 
 /* About Section */
 .footer-box h4 {
-	font-family: "DM Sans", Sans-serif;
-	font-size: 18px;
-	font-weight: 500;
+	font-family: damar;
+	font-size: 21px;
+    letter-spacing: 1px;
 	text-transform: uppercase;
 	line-height: 1.2em;
 }
