@@ -115,10 +115,11 @@
          </div>
       </section>
 <!-- Top SVG Wave -->
-<svg class="signature-svg-top" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+<svg class="signature-svg-top" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 200">
    <rect width="100%" height="100%" fill="#ffefe0"/>
-   <path fill="#af57ed" fill-opacity="1" d="M0,128L48,138.7C96,149,192,171,288,160C384,149,480,107,576,122.7C672,139,768,213,864,213.3C960,213,1056,139,1152,106.7C1248,75,1344,85,1392,90.7L1440,96L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
+   <path fill="#af57ed" fill-opacity="1" d="M0,80L48,90.7C96,101,192,123,288,112C384,101,480,59,576,74.7C672,91,768,165,864,165.3C960,165,1056,91,1152,58.7C1248,27,1344,37,1392,42.7L1440,48L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
 </svg>
+
 
 <!-- Signature Flavours Section -->
 <section class="signature-flavours-section" id="signatureFlavoursSection">
@@ -265,64 +266,24 @@
 
 
 
-      <!-- Instagram Section with Image Slider -->
-      <section class="instagram-showcase" id="social">
-         <div class="container d-flex justify-content-between align-items-center">
-            <!-- Left Content Block -->
-            <div class="instagram-showcase-left">
-               <h3>Follow Us On Instagram</h3>
-               <img src="assets/pictures/rightful-softees.png" alt="Rightful Softees Instagram" class="instagram-hashtag-image">
-               <p>We pride ourselves on exceptional flavors & deliver all around the country. We are focused on valuing your frozen cravings that will melt all your trouble away.</p>
-            </div>
-            <!-- Right Image Slider -->
-            <div class="instagram-showcase-slider">
-               <div id="slider-gallery-container" style="max-width: 100%; height: 400px; overflow: hidden; position: relative;">
-                  <div style="display: flex; transition: transform 1s ease-in-out; transform-style: preserve-3d;" id="image-slides">
-                     <div style="min-width: 100%; height: 100%; position: relative; display: flex; justify-content: center; align-items: center; overflow: hidden;">
-                        <img src="assets/pictures/Softiecery-Website-Gallery-2.jpg" alt="Image 1" style="width: 80%; height: 80%; object-fit: cover; border-radius: 10px;">
-                     </div>
-                     <div style="min-width: 100%; height: 100%; position: relative; display: flex; justify-content: center; align-items: center; overflow: hidden;">
-                        <img src="assets/pictures/Softiecery-Website-Gallery.jpg" alt="Image 2" style="width: 80%; height: 80%; object-fit: cover; border-radius: 10px;">
-                     </div>
-                  </div>
-               </div>
-               <script>
-                  let currentIndex = 0;
-                  
-                  function moveSlider() {
-                  const slides = document.getElementById('image-slides');
-                  const totalSlides = slides.children.length;
-                  
-                  // Calculate the offset
-                  const slideWidth = 100; // Each slide will take up 100% of the container width
-                  currentIndex = (currentIndex + 1) % totalSlides;
-                  const offset = -currentIndex * slideWidth;
-                  slides.style.transform = `translateX(${offset}%)`;
-                  
-                  // Apply 3D stacking effect
-                  Array.from(slides.children).forEach((slide, index) => {
-                      const distance = Math.abs(currentIndex - index); // Create the "stacking" effect
-                      const scale = 1 - (0.05 * distance); // Reduce scale as distance increases
-                      const rotateY = 15 * (distance); // Add tilt effect
-                      const zIndex = totalSlides - distance; // Ensure proper layering (higher z-index for the front image)
-                  
-                      slide.style.transform = `scale(${scale}) rotateY(${rotateY}deg)`;
-                      slide.style.zIndex = zIndex;
-                      slide.style.transition = 'transform 1s ease-in-out, z-index 0s';
-                  });
-                  }
-                  
-                  // Auto slide every 3 seconds
-                  setInterval(moveSlider, 3000);
-               </script>
-            </div>
-         </div>
-         <!-- Wave and Food Item (Move this section above Instagram Showcase) -->
-         <div class="wave-container">
-            <img src="assets/pictures/Model-crop-2.png" alt="Food Item" class="food-image">
-            <img src="assets/pictures/Curve.png" alt="Wave Design" class="wave-image">
-         </div>      
-      </section>
+      <!-- Instagram Section with Image -->
+<section class="instagram-showcase" id="social">
+   <div class="container d-flex justify-content-center align-items-center">
+      <!-- Left Content Block -->
+      <div class="instagram-showcase-left">
+         <h3>Follow Us On Instagram</h3>
+         <img src="assets/pictures/rightful-softees.png" alt="Rightful Softees Instagram" class="instagram-hashtag-image">
+         <p>We pride ourselves on exceptional flavors & deliver all around the country. We are focused on valuing your frozen cravings that will melt all your trouble away.</p>
+      </div>
+   </div>
+   
+   <!-- Wave and Food Item -->
+   <div class="wave-container">
+      <img src="assets/pictures/Model-crop-2.png" alt="Food Item" class="food-image">
+      <img src="assets/pictures/Curve.png" alt="Wave Design" class="wave-image">
+   </div>      
+</section>
+
       
 
 
