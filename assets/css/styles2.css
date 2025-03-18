@@ -692,8 +692,8 @@ body {
 .testimonial-section {
     position: relative;
     z-index: 9999; /* Increase z-index to bring it to the front */
-    margin-top: 60px;
-    margin-bottom: 100px;
+    margin-top: 200px;
+    margin-bottom: 200px;
 }
 
 /* Main slider container */
