@@ -948,8 +948,8 @@ body {
 /* Food Image - Behind the Wave */
 .food-image {
     position: absolute;
-    bottom: 50px;
-    left: 18%;
+    bottom: 40px;
+    left: 20%;
     transform: translateX(-47%) scale(0.8);
     z-index: 1;
     max-width: 630px;
