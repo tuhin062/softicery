@@ -1,8 +1,7 @@
 $(document).ready(function () {
-
-    $(".owl-carousel").owlCarousel({
+    $(".carousel-container").owlCarousel({ // <--- Use a unique class here
         loop: true,
-        margin: 10,
+        margin: 5,
         nav: false,
         dots: true,
         autoplay: true,
