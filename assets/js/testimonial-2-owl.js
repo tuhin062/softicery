@@ -15,7 +15,7 @@ $(document).ready(function () {
         }
     });
 
-    // Initialize Fancybox for Gallery
+    // Initializing Fancybox for Gallery
     Fancybox.bind("[data-fancybox='gallery']", {
         Thumbs: false, // Disable thumbnails
         Toolbar: true, // Show toolbar
