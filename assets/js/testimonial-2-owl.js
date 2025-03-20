@@ -11,7 +11,7 @@ $(document).ready(function () {
             0: { items: 1 },
             600: { items: 2 },
             1024: { items: 3 },
-            1500: { items: 6 }
+            1500: { items: 7 }
         }
     });
 
