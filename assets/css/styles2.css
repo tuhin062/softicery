@@ -1,14 +1,14 @@
 @font-face {
     font-family: 'penutbutter'; /* Choose a custom name */
     src:
-         url('assets/fonts/Peanut Butter.ttf') format('truetype');
+         url('/assets/fonts/Peanut Butter.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'AgetaChubby';
-    src: url('assets/fonts/ageta-chubby-demo.otf') format('opentype');
+    src: url('/assets/fonts/ageta-chubby-demo.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
   }
