@@ -452,8 +452,8 @@ body {
 /* Section Heading */
 .signature-flavours-heading {
     position: relative;
-    font-family: damar;
-    font-size: 5rem;
+    font-family: 'Damar';
+        font-size: 5rem;
     letter-spacing: 0.1975rem;
     font-weight: bold;
     color: #2E2E2E;
@@ -609,8 +609,8 @@ body {
 /* Section Heading */
 .flavour-showcase-heading {
     position: relative;
-    font-family: damar;
-    font-size: 4.5rem; /* Adjusted for readability */
+    font-family: 'Damar';
+        font-size: 4.5rem; /* Adjusted for readability */
     letter-spacing: 0.15rem;
     font-weight: bold;
     color: #FFFFFF; /* White Text */
@@ -705,8 +705,8 @@ body {
 /* Section Heading */
 .testimonial-heading {
     position: relative;
-    font-family: damar;
-    font-size: 5rem;
+    font-family: 'Damar';
+        font-size: 5rem;
     letter-spacing: 0.1975rem;
     font-weight: bold;
     color: white;
@@ -1052,8 +1052,8 @@ body {
 
 /* About Section */
 .footer-box h4 {
-	font-family: damar;
-	font-size: 21px;
+    font-family: 'Damar';
+    	font-size: 21px;
     letter-spacing: 1px;
 	text-transform: uppercase;
 	line-height: 1.2em;
