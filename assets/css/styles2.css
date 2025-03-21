@@ -1,14 +1,18 @@
 @font-face {
-    font-family: 'penutbutter'; /* Choose a custom name */
-    src:
-         url('assets/fonts/Peanut Butter.ttf') format('truetype');
+    font-family: 'penutbutter';
+    src: url('../fonts/Peanut Butter.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
-
+@font-face {
+    font-family: 'Segoe Script', sans-serif;
+    src: url('../fonts/segoesc.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 @font-face {
     font-family: 'AgetaChubby';
-    src: url('/assets/fonts/ageta-chubby-demo.otf') format('opentype');
+    src: url('../fonts/ageta-chubby-demo.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
   }
@@ -1054,7 +1058,8 @@ body {
 
 /* About Section */
 .footer-box h4 {
-    font-family: 'Damar';
+    font-family: 'AgetaChubby';
+    font-family: 'Segoe Script', sans-serif;
     	font-size: 21px;
     letter-spacing: 1px;
 	text-transform: uppercase;
