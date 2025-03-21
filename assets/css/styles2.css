@@ -46,6 +46,27 @@ body {
 	scrollbar-width: none;
 	/* For Firefox */
 }
+body {
+    cursor: none;
+}
+/* Custom Cursor */
+.custom-cursor {
+    width: 32px;
+    height: 32px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none; /* Ensures it doesn't interfere with clicks */
+    background: url('../pictures/ice-cream.png') no-repeat center;
+    background-size: contain;
+    z-index: 9999; /* Highest priority */
+    transform: translate(-50%, -50%);
+}
+
+/* Disable pointer actions where cursor is 'pointer' */
+a, button, [class*="pointer"] {
+    pointer-events: none;
+}
 
 /* Hides scrollbar for WebKit-based browsers (Chrome, Safari) */
 ::-webkit-scrollbar {
