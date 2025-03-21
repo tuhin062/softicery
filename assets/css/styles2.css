@@ -5,8 +5,8 @@
     font-style: normal;
 }
 @font-face {
-    font-family: 'Segoe Script', sans-serif;
-    src: url('../../assets/fonts/segoesc.ttf') format('truetype');
+    font-family: 'Segoe Script';
+    src: url('../fonts/segoesc.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -36,6 +36,8 @@ body {
 	/* Hide the scrollbars */
 	font-family: "DM Sans", serif;
     scroll-behavior: smooth;
+    padding: 0;
+    margin: 0;
 }
 
 body {
@@ -46,27 +48,7 @@ body {
 	scrollbar-width: none;
 	/* For Firefox */
 }
-body {
-    cursor: none;
-}
-/* Custom Cursor */
-.custom-cursor {
-    width: 32px;
-    height: 32px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    pointer-events: none; /* Ensures it doesn't interfere with clicks */
-    background: url('../pictures/ice-cream.png') no-repeat center;
-    background-size: contain;
-    z-index: 9999; /* Highest priority */
-    transform: translate(-50%, -50%);
-}
 
-/* Disable pointer actions where cursor is 'pointer' */
-a, button, [class*="pointer"] {
-    pointer-events: none;
-}
 
 /* Hides scrollbar for WebKit-based browsers (Chrome, Safari) */
 ::-webkit-scrollbar {
@@ -243,131 +225,48 @@ a, button, [class*="pointer"] {
 }
 
 
-/* Hero Banner Section */
-.banner-483726 {
-    background-color: #FFFFFF;
-    background-image: url('https://static.live.templately.com/woocommerce/2022/11/43c0fc8e-es-hero-bg.png');
-    background-position: center right;
-    background-repeat: no-repeat;
-    background-size: 40% auto;
-    padding: 5rem 12rem;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Center content horizontally */
-}
-
-/* Flexbox Wrapper */
-.banner-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 1200px;
-	padding-top: 90px;
-}
-
-/* Left Column - Text Styling */
-.left-827364 {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: #373547;
-    flex: 1; /* Makes sure it takes half the space */
-}
-
-.left-827364 h1,
-.left-827364 h2 {
-    font-family: 'AgetaChubby', sans-serif;
-	/*font-family: "penutbutter";*/
-    /*font-family: "Lato", Sans-serif;*/
-	/* font-family: 'Segoe Script', sans-serif; */
-	/* font-family: "Kaushan Script", serif; */
-    font-size: 100px;
-    font-weight: 400;
-    line-height: 1em;
-    /*color: #EC3264;*/
-    color: #FB6166;
-}
-
-.left-827364 p {
-	font-family: Caveat, serif;
-	font-size: 36px;
-    font-weight: 600;
-    line-height: 1.2em;
-    letter-spacing: 0px;
-    word-spacing: 0em;
-    color: #949BB0;
-}
-
-/* Right Column - Image Container */
-.right-573812 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-image: linear-gradient(180deg, #FFEAEB 0%, #F67275 100%);
-    border-radius: 50%;
-    width: 500px;
-    height: 500px;
+/* Banner Image Container */
+.banner-image-container {
     position: relative;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    flex: 1; /* Makes sure it takes half the space */
-    max-width: 500px;
+    display: inline-block; /* Ensures the container wraps the image size */
 }
 
-/* Floating Images */
-.float-981273 {
-    position: absolute;
-    transition: transform 0.3s ease-out;
-}
-
-/* Image 1 */
-.img-267845 {
-    top: 5%;
-    left: 10%;
-    width: 200px;
-    height: 390px;
-    transform: rotate(-7deg);
-    z-index: 2;
-}
-
-/* Image 2 */
-.img-745129 {
-    bottom: 5%;
-    right: 6%;
-    width: 320px;
-    height: 500px;
-    transform: rotate(10deg);
-    z-index: 2;
-}
-
-/* Ensure parent section contains the floating elements */
-.banner-483726 {
-    position: relative; /* Important: Keeps SVGs inside this section */
-    overflow: hidden; /* Ensures they don't overflow into other sections */
-}
-
-/* Floating Background SVGs */
-.floating-svg {
-    position: absolute;
-    width: 80px; /* Adjust size as needed */
+/* Banner Image */
+.banner-image {
+    width: 100%;
     height: auto;
-    opacity: 0.7;
-    transition: transform 0.3s ease-out;
-    z-index: 0; /* Keeps them behind other content */
+    display: block;
 }
 
-/* Floating Background SVGs */
-.floating-svg.svg-5 {
-    width: 130px !important;
+/* Overlay Images Wrapper */
+.overlay-images {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Ensures overlays don't block interactions */
+    padding: 0;
+    margin: 0;
 }
 
-/* Individual Positioning */
-.svg-1 { top: 20%; left: 2%; }
-.svg-2 { top: 25%; right: 10%; }
-.svg-3 { bottom: 1%; left: 2%; }
-.svg-4 { bottom: 5%; right: 46%; }
-.svg-5 { bottom: 4%; right: 2%; }
+/* Base Overlay Image Styling */
+.overlay-image {
+    position: absolute;
+    width: auto; /* Adjust size as needed */
+    height: auto;
+    max-width: 150px; /* Ensures images don't get too large */
+}
+
+/* Individual Image Positioning */
+.overlay-1 {
+    bottom: 120px;
+    right: 730px;
+}
+.overlay-2 {
+    top: 148px;
+    right: 57px;
+}
 
 
 
@@ -464,7 +363,7 @@ a, button, [class*="pointer"] {
 	margin-top: 10px;
 	letter-spacing: 0.5px;
 	text-align: center;
-    font-family: 'Segoe Script', sans-serif;
+    font-family: 'Segoe Script';
 }
 
 
@@ -1406,7 +1305,7 @@ a, button, [class*="pointer"] {
 		font-size: 1rem;
 		/* Slightly reduced */
 		font-weight: 600;
-        font-family: 'Segoe Script', sans-serif;
+        font-family: 'Segoe Script';
 	}
 
 	/* Touch-friendly hover effect */
