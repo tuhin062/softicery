@@ -8,14 +8,14 @@
 
 @font-face {
     font-family: 'AgetaChubby';
-    src: url('assets/fonts/ageta-chubby-demo.otf') format('opentype');
+    src: url('/assets/fonts/ageta-chubby-demo.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
   }
 
   @font-face {
     font-family: 'Damar'; /* Custom name for the font */
-    src: url('/assets/fonts/damar.ttf') format('truetype');
+    src: url('assets/fonts/damar.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -1052,7 +1052,7 @@ body {
 
 /* About Section */
 .footer-box h4 {
-    font-family: 'Damar';
+    font-family: 'AgetaChubby';
     	font-size: 21px;
     letter-spacing: 1px;
 	text-transform: uppercase;
