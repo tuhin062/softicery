@@ -15,8 +15,8 @@
 
   @font-face {
     font-family: 'Damar';
-    src: url('/assets/fonts/DamarRegular.woff2') format('woff2'),
-        url('/assets/fonts/DamarRegular.woff') format('woff');
+    src: url('../fonts/DamarRegular.woff2') format('woff2'),
+        url('../fonts/DamarRegular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
