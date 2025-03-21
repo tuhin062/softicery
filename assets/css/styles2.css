@@ -14,10 +14,12 @@
   }
 
   @font-face {
-    font-family: 'Damar'; /* Custom name for the font */
-    src: url('assets/fonts/damar.ttf') format('truetype');
+    font-family: 'Damar';
+    src: url('/assets/fonts/DamarRegular.woff2') format('woff2'),
+        url('/assets/fonts/DamarRegular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 
@@ -1052,7 +1054,7 @@ body {
 
 /* About Section */
 .footer-box h4 {
-    font-family: 'AgetaChubby';
+    font-family: 'Damar';
     	font-size: 21px;
     letter-spacing: 1px;
 	text-transform: uppercase;
