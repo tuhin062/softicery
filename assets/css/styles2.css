@@ -1,14 +1,14 @@
 @font-face {
     font-family: 'penutbutter'; /* Choose a custom name */
     src:
-         url('/assets/fonts/Peanut Butter.ttf') format('truetype');
+         url('assets/fonts/Peanut Butter.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'AgetaChubby';
-    src: url('/assets/fonts/ageta-chubby-demo.otf') format('opentype');
+    src: url('assets/fonts/ageta-chubby-demo.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
   }
@@ -39,37 +39,6 @@ body {
 	/* For Internet Explorer 10+ */
 	scrollbar-width: none;
 	/* For Firefox */
-}
-/* Hide the default cursor */
-body {
-    cursor: none;
-}
-
-.custom-cursor {
-    width: 32px;
-    height: 32px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: url("/assets/pictures/ice-cream.png") no-repeat center;
-    background-size: contain;
-    pointer-events: none; /* Ensures it doesn't block interactions */
-    transform: translate(0, 0); /* Centers image perfectly */
-    z-index: 99999999999; /* Ensures it's always on top */
-    opacity: 0; /* Hidden initially, appears on movement */
-}
-
-
-/* Disable pointer actions where cursor is 'pointer' */
-a, button, [class*="pointer"] {
-    pointer-events: none;
-}
-
-
-/* Allow Text Selection */
-a, button, input, textarea {
-    cursor: none !important;
-    pointer-events: all; /* Allows interactions with these elements */
 }
 
 /* Hides scrollbar for WebKit-based browsers (Chrome, Safari) */
