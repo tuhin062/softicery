@@ -271,6 +271,7 @@ body {
     background-color: transparent;
     display: flex;
     position: relative;
+    justify-content: flex-start; /* Aligns content to the left */
 }
 
 /* Model Image */
