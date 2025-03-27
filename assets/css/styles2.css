@@ -267,6 +267,16 @@ body {
     position: relative;
 }
 
+/* Left Banner Image */
+.left-banner-image {
+    position: absolute; /* Allows top, left adjustments */
+    width: auto;
+    height: 29rem;/* Adjusts dynamically */
+    max-height: 100%;
+    top: 26%;   /* Moves the image down */
+    left: 9%;   /* Moves the image to the right */
+}
+
 /* Right Flexbox (50% Width) */
 .right-half-width {
     flex: 1;
