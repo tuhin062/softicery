@@ -210,13 +210,14 @@ body {
 
 /* Banner Section */
 .banner-section {
-    width: 100%;
-    height: 100vh; /* Full screen height */
-    background-color: #ED2E64; /* Background color */
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    background-color: #ED2E64;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative; /* Ensure child elements are positioned correctly */
+    position: relative;
+    overflow: hidden; /* Prevents unwanted scrollbars */
 }
 
 /* Banner Container */
@@ -225,7 +226,7 @@ body {
     height: 100%;
     display: flex;
     flex-direction: column;
-    position: relative; /* To handle absolute positioning inside */
+    position: relative;
 }
 
 /* First Flexbox (100% Width - Background Image Layer) */
@@ -233,32 +234,34 @@ body {
     width: 100%;
     display: flex;
     position: relative;
-    z-index: 1; /* Lower layer */
+    z-index: 1;
 }
 
 /* White Curve Image */
 .banner-image {
-    width: 93%;
-    height: 80%;
+    width: 90vw; /* Dynamic width based on viewport */
+    max-width: 1400px; /* Ensures it doesn’t get too big on large screens */
+    height: 36vh; /* Maintains aspect ratio */
 }
 
 /* Row for Second & Third Flexbox */
 .content-row {
     width: 100%;
     display: flex;
-    flex-direction: row; /* Ensures they are in the same row */
-    align-items: center; /* Aligns items vertically */
-    justify-content: space-between; /* Spreads items evenly */
-    position: absolute; /* Makes it start from the top */
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
     top: 0;
     left: 0;
-    height: 100%; /* Full height */
-    z-index: 2; /* Ensures it's above .full-width */
+    height: 100%;
+    z-index: 2;
+    padding: 0 5vw; /* Adds some spacing for better responsiveness */
 }
 
 /* Left Flexbox (50% Width) */
 .left-half-width {
-    width: 47%;
+    flex: 1; /* Makes it take equal space dynamically */
     height: 100%;
     background-color: transparent;
     position: relative;
@@ -266,19 +269,22 @@ body {
 
 /* Right Flexbox (50% Width) */
 .right-half-width {
-    width: 53%;
+    flex: 1;
     height: 100%;
     background-color: transparent;
     display: flex;
     position: relative;
-    justify-content: flex-start; /* Aligns content to the left */
+    justify-content: flex-start;
 }
 
 /* Model Image */
 .right-banner-image {
     width: auto;
-    height: 98%;
+    height: 100vh; /* Adjusts dynamically */
+    max-height: 95%; /* Ensures it doesn't overflow */
+    object-fit: contain; /* Ensures the aspect ratio is maintained */
 }
+
 
 
 
