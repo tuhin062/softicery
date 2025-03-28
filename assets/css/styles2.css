@@ -315,9 +315,8 @@ body {
     bottom: 20%;
     right: 93%;
 }
-
-/* Large Screens (Above 15 inches - Typically > 1400px width) */
-@media screen and (min-width: 1400px) {
+/* Large Screens (Above 17 inches - Typically > 1600px width) */
+@media screen and (min-width: 1600px) {
     .banner-image {
         width: 85vw; /* Slightly reduced width for better scaling */
         max-width: 1600px;
@@ -326,12 +325,12 @@ body {
 
     .left-banner-image {
         height: 32rem; /* Slightly larger for better visibility */
-        top: 24%; /* Adjust position */
+        top: 28%; /* Adjust position */
         left: 12%;
     }
 
     .right-banner-image {
-        height: 45rem; /* Increase model size proportionally */
+        height: 47rem; /* Increase model size proportionally */
         top: 0%;
         right: 2%; /* Move slightly for better spacing */
     }
@@ -340,13 +339,13 @@ body {
         width: 7vw; /* Adjust size */
         max-width: 140px;
         top: 12%;
-        right: 6%;
+        right: 10%;
     }
 
     .decor-2 {
-        width: 85vw;
-        bottom: 18%;
-        right: 90%;
+        width: 8vw;
+        bottom: 42%;
+        right: 81%;
     }
 }
 
