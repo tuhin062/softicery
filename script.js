@@ -68,7 +68,13 @@ document.addEventListener("DOMContentLoaded", function () {
         duration: 2,
         ease: "power1.inOut"
     });
-
+    // **Continuous Rotation Effect for Decor-1**
+    gsap.to(".decor-1", {
+        rotation: 360,
+        duration: 80, 
+        repeat: -1,
+        ease: "linear"
+    });
     gsap.to(".decor-2", {
         y: 10,
         repeat: -1,
@@ -80,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // **Continuous Rotation Effect for Decor-2**
     gsap.to(".decor-2", {
         rotation: 360,
-        duration: 75, // Slow rotation (increase for even slower effect)
+        duration: 75, 
         repeat: -1,
         ease: "linear"
     });
