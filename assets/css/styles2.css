@@ -294,6 +294,27 @@ body {
     top: 0%; /* Adjusts vertical position */
     right: 0%; /* Moves image to the left slightly */
 }
+/* Right-side decorative images */
+.decor-image {
+    position: absolute; /* Allows precise positioning */
+    width: auto;
+    height: auto;
+    max-width: 100%;
+}
+
+/* Individual Element Positions */
+.decor-1 {
+    width: 8vw; /* Relative to screen size */
+    max-width: 120px;
+    top: 15%;
+    right: 8%;
+}
+
+.decor-2 {
+    width: 9vw; /* Relative to screen size */
+    bottom: 20%;
+    right: 93%;
+}
 
 
 
