@@ -272,7 +272,6 @@ body {
     position: absolute; /* Allows top, left adjustments */
     width: auto;
     height: 29rem; /* Fixed height for consistency */
-    max-height: 100%;
     top: 26%; /* Moves the image down */
     left: 9%; /* Moves the image to the right */
 }
@@ -290,10 +289,10 @@ body {
     position: absolute; /* Allows top, right adjustments */
     width: auto;
     height: 41.5rem; /* Fixed height for consistency */
-    max-height: 100%;
     top: 0%; /* Adjusts vertical position */
     right: 0%; /* Moves image to the left slightly */
 }
+
 /* Right-side decorative images */
 .decor-image {
     position: absolute; /* Allows precise positioning */
@@ -330,9 +329,9 @@ body {
     }
 
     .right-banner-image {
-        height: 47rem; /* Increase model size proportionally */
+        height: 70rem; /* Increase model size proportionally */
         top: 0%;
-        right: 2%; /* Move slightly for better spacing */
+        right: 0%; /* Move slightly for better spacing */
     }
 
     .decor-1 {
