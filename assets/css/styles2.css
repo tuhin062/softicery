@@ -314,41 +314,6 @@ body {
     bottom: 20%;
     right: 93%;
 }
-/* Large Screens (Above 17 inches - Typically > 1600px width) */
-@media screen and (min-width: 1600px) {
-    .banner-image {
-        width: 85vw; /* Slightly reduced width for better scaling */
-        max-width: 1600px;
-        height: 38vh;
-    }
-
-    .left-banner-image {
-        height: 32rem; /* Slightly larger for better visibility */
-        top: 28%; /* Adjust position */
-        left: 12%;
-    }
-
-    .right-banner-image {
-        height: 70rem; /* Increase model size proportionally */
-        top: 0%;
-        right: 0%; /* Move slightly for better spacing */
-    }
-
-    .decor-1 {
-        width: 7vw; /* Adjust size */
-        max-width: 140px;
-        top: 12%;
-        right: 10%;
-    }
-
-    .decor-2 {
-        width: 8vw;
-        bottom: 42%;
-        right: 81%;
-    }
-}
-
-
 
 
 /* Container for the entire section */
@@ -1277,16 +1242,437 @@ body {
 }
 
 
+
+/* Active State Styles */
+.nav-512834 ul li a.active {
+	color: #FFE000;
+	/* Highlight color */
+	font-weight: 600;
+	position: relative;
+}
+
+/* Active Indicator (Underline Effect) */
+.nav-512834 ul li a.active::after {
+	content: "";
+	position: absolute;
+	left: 50%;
+	bottom: -5px;
+	width: 50%;
+	height: 2px;
+	background: #FFE000;
+	transform: translateX(-50%);
+	transition: width 0.3s ease-in-out;
+}
+
+/* Mobile Menu Active State */
+.mobile-nav ul li a.active {
+	color: #FFE000;
+	font-weight: 600;
+}
+
+/* Fix for sections not triggering active state correctly */
+section {
+	scroll-margin-top: 100px;
+	/* Prevents section from being hidden under sticky header */
+	min-height: 10vh;
+	/* Ensures sections are large enough for IntersectionObserver */
+}
+
+
+
+
+
+/* ========================================= */
+/* MEDIA QUERIES SECTION */
+/* ========================================= */
+
+/* ========================================= */
+/* Large Screens (Above 17 inches - Typically > 1600px width) */
+/* ========================================= */
+@media screen and (min-width: 1600px) {
+    /* Add styles for large screens here */
+	.banner-image {
+        width: 85vw; /* Slightly reduced width for better scaling */
+        max-width: 1600px;
+        height: 38vh;
+    }
+
+    .left-banner-image {
+        height: 32rem; /* Slightly larger for better visibility */
+        top: 28%; /* Adjust position */
+        left: 12%;
+    }
+
+    .right-banner-image {
+        height: 70rem; /* Increase model size proportionally */
+        top: 0%;
+        right: 0%; /* Move slightly for better spacing */
+    }
+
+    .decor-1 {
+        width: 7vw; /* Adjust size */
+        max-width: 140px;
+        top: 12%;
+        right: 10%;
+    }
+
+    .decor-2 {
+        width: 8vw;
+        bottom: 42%;
+        right: 81%;
+    }
+
+
+	/*CSS for footer*/
+	.footer-container {
+        padding: 0rem 12rem; /* More padding for wider screens */
+    }
+    
+    .brand-box img {
+        max-width: 180px; /* Slightly larger brand logo */
+    }
+    
+    .footer-box h4 {
+        font-size: 24px;
+    }
+
+    .footer-box p,
+    .footer-box ul li {
+        font-size: 18px;
+    }
+
+    .social-icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    .social-icon i {
+        font-size: 1.5rem;
+    }
+}
+
+/* ========================================= */
+/* Tablet-Specific Styles (600px - 1024px) */
+/* Covers tablets in both landscape & portrait mode */
+/* ========================================= */
+@media (min-width: 600px) and (max-width: 1024px) {
+    /* Add styles for tablets here */
+	body {
+		font-size: 1rem;
+		/* Ensure readability */
+	}
+
+	/* Header & Navigation */
+	.navbar {
+		padding: 0.5rem 3rem;
+	}
+
+	.navbar .menu {
+		display: flex;
+		flex-direction: row;
+		/* Ensure horizontal alignment */
+		gap: 1.5rem;
+	}
+
+	.navbar .menu li {
+		font-size: 1rem;
+	}
+
+	/* Hero Banner Section */
+	.banner-483726 {
+		background-position: cover;
+		background-repeat: no-repeat;
+		padding: 3rem 6rem;
+		/* Reduce padding for tablets */
+		height: 80vh;
+		/* Adjust height for tablets */
+	}
+
+	/* Flexbox Wrapper */
+	.banner-wrapper {
+		max-width: 900px;
+		/* Adjust max-width for tablets */
+		padding-top: 60px;
+		/* Reduce top padding */
+	}
+
+	/* Left Column - Text Styling */
+	.left-827364 h1,
+	.left-827364 h2 {
+		font-size: 72px;
+		/* Reduce font size for tablets */
+		line-height: 1.1em;
+		/* Adjust line height */
+	}
+
+	.left-827364 p {
+		font-size: 20px;
+		/* Reduce font size for tablets */
+	}
+
+	/* Right Column - Image Container */
+	.right-573812 {
+		width: 400px;
+		/* Adjust size for tablets */
+		height: 400px;
+	}
+
+	/* Floating Images */
+	.img-267845 {
+		top: 5%;
+		/* Adjust positioning */
+		left: 5%;
+		width: 180px;
+		/* Adjust size for tablets */
+		height: auto;
+		/* Maintain aspect ratio */
+	}
+
+	.img-745129 {
+		bottom: 5%;
+		/* Adjust positioning */
+		right: 5%;
+		width: 280px;
+		/* Adjust size for tablets */
+		height: auto;
+		/* Maintain aspect ratio */
+	}
+
+	/* Floating Background SVGs */
+	.floating-svg {
+		width: 70px;
+		/* Adjust size for tablets */
+	}
+
+	/* Individual Positioning for SVGs */
+	.svg-1 {
+		top: 15%;
+		left: 5%;
+	}
+
+	.svg-2 {
+		top: 20%;
+		right: 10%;
+	}
+
+	.svg-3 {
+		bottom: 5%;
+		left: 5%;
+	}
+
+	.svg-4 {
+		bottom: 1%;
+		right: 40%;
+	}
+
+	.svg-5 {
+		bottom: 5%;
+		right: 5%;
+	}
+
+	/* Adjust size */
+
+	/* Services Section */
+	.services-container {
+		grid-template-columns: repeat(2, 1fr);
+		/* 2 columns for better spacing */
+		gap: 2rem;
+	}
+
+	.services-box {
+		padding: 1.5rem;
+	}
+
+	/* Blog Section */
+	.blog-section {
+		grid-template-columns: repeat(2, 1fr);
+		/* 2-column layout */
+	}
+
+	.blog-box {
+		padding: 1.5rem;
+	}
+
+	/* Testimonials Section */
+	.testimonial-slider {
+		padding: 2rem;
+	}
+
+	.testimonial-box {
+		padding: 1.5rem;
+		text-align: center;
+	}
+
+
+	.flavour-section-heading {
+		font-size: 64px;
+		text-align: center;
+		padding: 30px;
+	}
+
+	.flavour-video-container {
+		padding: 5px;
+	}
+
+	.flavour-video {
+		width: 100%;
+	}
+
+	.flavour-section-review-container {
+		padding: 3rem 2rem;
+	}
+
+	.flavour-review-flexbox {
+		flex-direction: column;
+		text-align: center;
+		gap: 1rem;
+	}
+
+	.flavour-reviewer-text {
+		padding-left: 0;
+	}
+
+	.flavour-review-text {
+		font-size: 1.8em;
+		padding-right: 0;
+	}
+
+	/*Footer Section*/
+	.footer-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 0rem 5rem;
+        text-align: center;
+    }
+
+    .footer-box {
+        width: 100%;
+        max-width: 500px;
+        margin-bottom: 2rem;
+    }
+
+    .footer-box h4 {
+        font-size: 20px;
+    }
+
+    .footer-box p,
+    .footer-box ul li {
+        font-size: 16px;
+    }
+
+    .social-box {
+        justify-content: center;
+    }
+
+    .bottom-footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+/* ========================================= */
+/* Standard Desktops and Laptops (Above 768px) */
+/* Applies to screens larger than smartphones */
+/* ========================================= */
 @media (min-width: 768px) {
+    /* Add styles for desktops/laptops here */
 	.hamburger-icon {
 		display: none;
 		/* Hide hamburger button on desktop */
 	}
+
+	/*footer css*/
+	.footer-container {
+        padding: 0rem 8rem;
+    }
 }
 
-/* Smartphone Media Query */
+/* ========================================= */
+/* Smartphone Media Query (Up to 768px width) */
+/* ========================================= */
 @media (max-width: 768px) {
+    /* Add styles for smartphones here */
+	.banner-section {
+        height: auto; /* Adjust height dynamically */
+        padding: 5vh 0; /* Add vertical padding */
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+    }
 
+    .banner-container {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+    }
+
+    /* Full-width image */
+    .banner-image {
+        width: 100%;
+        height: auto;
+        max-width: 90vw;
+    }
+
+    /* Adjust content layout */
+    .content-row {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        height: auto;
+        position: relative;
+    }
+
+    /* Left-side content */
+    .left-half-width,
+    .right-half-width {
+        flex: none;
+        width: 90%; /* Take full width with margins */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        text-align: center;
+    }
+
+    /* Left banner image */
+    .left-banner-image {
+        position: relative;
+        width: 80%;
+        height: auto;
+        top: 0;
+        left: 0;
+    }
+
+    /* Right banner image */
+    .right-banner-image {
+        width: 80%;
+        height: auto;
+        position: relative;
+        top: 0;
+        right: 0;
+    }
+
+    /* Decorative elements adjustments */
+    .decor-image {
+        position: absolute;
+        width: 15vw; /* Smaller images on mobile */
+    }
+
+    .decor-1 {
+        top: 5%;
+        right: 10%;
+    }
+
+    .decor-2 {
+        bottom: 5%;
+        right: 10%;
+    }
 	.nav-512834 .list-374612 {
 		display: none;
 		/* Hide the regular desktop menu */
@@ -1642,335 +2028,49 @@ body {
 		border-radius: 8px;
 	}
 
-	.footer {
-		padding: 4rem 1rem 0rem 1rem;
-	}
-
-	/* Adjust Footer Container */
 	.footer-container {
-		flex-direction: column;
-		align-items: center;
-		text-align: center;
-		padding: 0 2rem;
-		gap: 2rem;
-	}
+        flex-direction: column;
+        align-items: center;
+        padding: 0rem 2rem;
+        text-align: center;
+    }
 
-	/* Footer Boxes */
-	.footer-box {
-		width: 100% !important;
-	}
+    .footer-box {
+        width: 100%;
+        max-width: 400px;
+        margin-bottom: 2rem;
+    }
 
-	.brand-box {
-		display: flex;
-		justify-content: center;
-		width: 100%;
-	}
+    .brand-box img {
+        max-width: 120px;
+    }
 
-	.brand-box img {
-		max-width: 120px;
-		padding: 10px;
-	}
+    .footer-box h4 {
+        font-size: 18px;
+    }
 
-	/* About Section */
-	.footer-box h4 {
-		font-size: 16px;
-	}
+    .footer-box p,
+    .footer-box ul li {
+        font-size: 15px;
+    }
 
-	.footer-box p {
-		font-size: 14px;
-		line-height: 1.5em;
-	}
+    .social-box {
+        justify-content: center;
+    }
 
-	/* Contact Section */
-	.footer-box ul li {
-		font-size: 14px;
-	}
+    .bottom-footer-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px;
+    }
 
-	/* Social Media Icons */
-	.social-box {
-		justify-content: center;
-		gap: 0.8rem;
-	}
+    .footer-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
 
-	.social-icon {
-		width: 38px;
-		height: 38px;
-	}
-
-	.social-icon i {
-		font-size: 1.1rem;
-	}
-
-	/* Bottom Footer */
-	.bottom-footer-container {
-		flex-direction: column;
-		align-items: center;
-		text-align: center;
-		gap: 1rem;
-		padding: 0 1rem;
-	}
-
-	.copyright {
-		font-size: 14px;
-		flex-direction: column;
-	}
-
-	/* Center Align Footer Links */
-	.footer-links {
-		flex-direction: column;
-		align-items: center;
-		/* Ensures perfect center alignment */
-		text-align: center;
-		gap: 1rem;
-		padding: 0;
-		margin: 0 auto;
-		/* Ensures it remains centered */
-	}
-
-	.footer-links li a {
-		font-size: 14px;
-		padding: 0.4rem 0.8rem;
-	}
-
-	.footer-links li a i {
-		font-size: 1rem;
-	}
-}
-
-
-/* Tablet-Specific Styles (600px - 1024px) */
-@media (min-width: 600px) and (max-width: 1024px) {
-
-	/* General Layout Adjustments */
-	body {
-		font-size: 1rem;
-		/* Ensure readability */
-	}
-
-	/* Header & Navigation */
-	.navbar {
-		padding: 0.5rem 3rem;
-	}
-
-	.navbar .menu {
-		display: flex;
-		flex-direction: row;
-		/* Ensure horizontal alignment */
-		gap: 1.5rem;
-	}
-
-	.navbar .menu li {
-		font-size: 1rem;
-	}
-
-	/* Hero Banner Section */
-	.banner-483726 {
-		background-position: cover;
-		background-repeat: no-repeat;
-		padding: 3rem 6rem;
-		/* Reduce padding for tablets */
-		height: 80vh;
-		/* Adjust height for tablets */
-	}
-
-	/* Flexbox Wrapper */
-	.banner-wrapper {
-		max-width: 900px;
-		/* Adjust max-width for tablets */
-		padding-top: 60px;
-		/* Reduce top padding */
-	}
-
-	/* Left Column - Text Styling */
-	.left-827364 h1,
-	.left-827364 h2 {
-		font-size: 72px;
-		/* Reduce font size for tablets */
-		line-height: 1.1em;
-		/* Adjust line height */
-	}
-
-	.left-827364 p {
-		font-size: 20px;
-		/* Reduce font size for tablets */
-	}
-
-	/* Right Column - Image Container */
-	.right-573812 {
-		width: 400px;
-		/* Adjust size for tablets */
-		height: 400px;
-	}
-
-	/* Floating Images */
-	.img-267845 {
-		top: 5%;
-		/* Adjust positioning */
-		left: 5%;
-		width: 180px;
-		/* Adjust size for tablets */
-		height: auto;
-		/* Maintain aspect ratio */
-	}
-
-	.img-745129 {
-		bottom: 5%;
-		/* Adjust positioning */
-		right: 5%;
-		width: 280px;
-		/* Adjust size for tablets */
-		height: auto;
-		/* Maintain aspect ratio */
-	}
-
-	/* Floating Background SVGs */
-	.floating-svg {
-		width: 70px;
-		/* Adjust size for tablets */
-	}
-
-	/* Individual Positioning for SVGs */
-	.svg-1 {
-		top: 15%;
-		left: 5%;
-	}
-
-	.svg-2 {
-		top: 20%;
-		right: 10%;
-	}
-
-	.svg-3 {
-		bottom: 5%;
-		left: 5%;
-	}
-
-	.svg-4 {
-		bottom: 1%;
-		right: 40%;
-	}
-
-	.svg-5 {
-		bottom: 5%;
-		right: 5%;
-	}
-
-	/* Adjust size */
-
-	/* Services Section */
-	.services-container {
-		grid-template-columns: repeat(2, 1fr);
-		/* 2 columns for better spacing */
-		gap: 2rem;
-	}
-
-	.services-box {
-		padding: 1.5rem;
-	}
-
-	/* Blog Section */
-	.blog-section {
-		grid-template-columns: repeat(2, 1fr);
-		/* 2-column layout */
-	}
-
-	.blog-box {
-		padding: 1.5rem;
-	}
-
-	/* Testimonials Section */
-	.testimonial-slider {
-		padding: 2rem;
-	}
-
-	.testimonial-box {
-		padding: 1.5rem;
-		text-align: center;
-	}
-
-	/* Footer */
-	.footer {
-		flex-direction: column;
-		text-align: center;
-	}
-
-	.footer .footer-box {
-		width: 100%;
-		margin-bottom: 1.5rem;
-	}
-
-	.footer .social-icons {
-		justify-content: center;
-	}
-
-
-	.flavour-section-heading {
-		font-size: 64px;
-		text-align: center;
-		padding: 30px;
-	}
-
-	.flavour-video-container {
-		padding: 5px;
-	}
-
-	.flavour-video {
-		width: 100%;
-	}
-
-	.flavour-section-review-container {
-		padding: 3rem 2rem;
-	}
-
-	.flavour-review-flexbox {
-		flex-direction: column;
-		text-align: center;
-		gap: 1rem;
-	}
-
-	.flavour-reviewer-text {
-		padding-left: 0;
-	}
-
-	.flavour-review-text {
-		font-size: 1.8em;
-		padding-right: 0;
-	}
-
-}
-
-
-/* Active State Styles */
-.nav-512834 ul li a.active {
-	color: #FFE000;
-	/* Highlight color */
-	font-weight: 600;
-	position: relative;
-}
-
-/* Active Indicator (Underline Effect) */
-.nav-512834 ul li a.active::after {
-	content: "";
-	position: absolute;
-	left: 50%;
-	bottom: -5px;
-	width: 50%;
-	height: 2px;
-	background: #FFE000;
-	transform: translateX(-50%);
-	transition: width 0.3s ease-in-out;
-}
-
-/* Mobile Menu Active State */
-.mobile-nav ul li a.active {
-	color: #FFE000;
-	font-weight: 600;
-}
-
-/* Fix for sections not triggering active state correctly */
-section {
-	scroll-margin-top: 100px;
-	/* Prevents section from being hidden under sticky header */
-	min-height: 10vh;
-	/* Ensures sections are large enough for IntersectionObserver */
+    .footer-links li a {
+        padding: 0.3rem 0.8rem;
+        font-size: 14px;
+    }
 }
