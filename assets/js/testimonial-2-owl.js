@@ -8,8 +8,8 @@ $(document).ready(function () {
         autoplayTimeout: 3000,
         autoplayHoverPause: true,
         responsive: {
-            0: { items: 1 },
-            600: { items: 2 },
+            0: { items: 2 },
+            600: { items: 4 },
             1024: { items: 6 },
             1500: { items: 7 }
         }
