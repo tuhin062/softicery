@@ -2173,8 +2173,8 @@ section {
     #testimonial-carousel .owl-nav .owl-next {
 		display: none;
     }
-	section{
-		min-height: 106px;
+	.wave-wrapper{
+		min-height: 105px;
 	}
 	/* Adjusting padding and layout */
     .instagram-showcase {
