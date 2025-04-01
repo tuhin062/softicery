@@ -305,7 +305,7 @@ body {
 /* ===================== */
 /* RESPONSIVE STYLES FOR SCREENS >1500px */
 /* ===================== */
-@media screen and (min-width: 1900px) {
+@media screen and (min-width: 1878px) and (min-height: 793px) {
 	    /* Background Image Layer (Middle Layer) */
 		.banner-bg {
 			width: 90%; /* Slightly increase width for better fit */
@@ -323,7 +323,7 @@ body {
     }
 
     .heading-image {
-        margin-top: 235px; /* Slightly lowers text */
+        margin-top: 290px; /* Slightly lowers text */
         width: 100%;
         max-width: 540px; /* Makes the heading image larger */
     }
