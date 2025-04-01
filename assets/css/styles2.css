@@ -216,7 +216,7 @@ body {
     min-height: 100vh;
     background-color: #ED2E64;
     display: flex;
-    align-items: center;
+    align-items: flex-start; /* Align everything to the top of the section */
     justify-content: center;
     position: relative;
     overflow: hidden;
@@ -228,14 +228,14 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 1; /* Below main content */
+    z-index: 1; /* Below the main content */
     display: flex;
     justify-content: center;
 }
 
 .banner-image {
     width: 100%;
-    max-width: 1400px;
+    max-width: 1600px; /* Increased size for bigger screens */
     height: auto;
 }
 
@@ -247,37 +247,35 @@ body {
     grid-template-columns: 1fr 1fr;
     width: 90%;
     max-width: 1400px;
-    align-items: center;
     gap: 2rem;
+    padding-top: 0; /* Remove any extra gap */
 }
 
 /* Left Content */
 .banner-left {
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Align to the top */
+	align-items: center;
 }
 
 .heading-image {
-    width: 75%;
+    width: 50%;
     max-width: 500px;
-    margin-top: 6vh; /* Moves it downward */
 }
 
 /* Right Content */
 .banner-right {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: flex-start; /* Aligns content to the top */
     position: relative;
+    height: 100%;
 }
 
 .model-image {
-    width: 110%; /* Bigger than container */
-    max-width: 550px;
+    width: 100%;
+    max-width: 700px; /* Increased max size for the model */
     object-fit: contain;
-    position: relative;
-    top: -16vh; /* Makes it start from the very top */
 }
 
 /* Decorative Images */
@@ -296,46 +294,7 @@ body {
     left: 5%;
 }
 
-/* RESPONSIVENESS */
-@media (max-width: 900px) {
-    .banner-content {
-        grid-template-columns: 1fr; /* Stacks content */
-        text-align: center;
-    }
 
-    .banner-left, .banner-right {
-        justify-content: center;
-        align-items: center;
-    }
-
-    .heading-image {
-        width: 80%;
-        margin-top: 4vh; /* Adjusted */
-    }
-
-    .model-image {
-        width: 90%;
-        max-width: 450px;
-        top: -3vh; /* Slight adjustment */
-    }
-}
-
-@media (max-width: 600px) {
-    .banner-image {
-        width: 90%;
-    }
-
-    .heading-image {
-        width: 85%;
-        margin-top: 3vh; /* Further adjustment */
-    }
-
-    .model-image {
-        width: 100%;
-        max-width: 400px;
-        top: -2vh; /* Minor tweak */
-    }
-}
 
 /* Container for the entire section */
 .choose-us-section {
