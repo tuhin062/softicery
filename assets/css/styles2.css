@@ -208,113 +208,134 @@ body {
 	display: block;
 }
 
-/* Banner Section */
+
+
+/* Banner Section (Main Canvas) */
 .banner-section {
-    width: 100vw; /* Full viewport width */
-    height: 100vh; /* Full viewport height */
+    width: 100vw;
+    min-height: 100vh;
     background-color: #ED2E64;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    overflow: hidden; /* Prevents unwanted scrollbars */
+    overflow: hidden;
 }
 
-/* Banner Container */
-.banner-container {
+/* Background Image Layer (Middle Layer) */
+.banner-bg {
     width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-}
-
-/* First Flexbox (100% Width - Background Image Layer) */
-.full-width {
-    width: 100%;
-    display: flex;
-    position: relative;
-    z-index: 1;
-}
-
-/* White Curve Image */
-.banner-image {
-    width: 90vw; /* Dynamic width based on viewport */
-    max-width: 1400px; /* Ensures it doesn’t get too big on large screens */
-    height: 36vh; /* Maintains aspect ratio */
-}
-
-/* Row for Second & Third Flexbox */
-.content-row {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
     position: absolute;
     top: 0;
     left: 0;
-    height: 100%;
-    z-index: 2;
-    padding: 0 5vw; /* Adds some spacing for better responsiveness */
+    z-index: 1; /* Below main content */
+    display: flex;
+    justify-content: center;
 }
 
-/* Left Flexbox (50% Width) */
-.left-half-width {
-    flex: 1; /* Makes it take equal space dynamically */
-    height: 100%;
-    background-color: transparent;
-    position: relative;
-}
-
-/* Left Banner Image */
-.left-banner-image {
-    position: absolute; /* Allows top, left adjustments */
-    width: auto;
-    height: 29rem; /* Fixed height for consistency */
-    top: 26%; /* Moves the image down */
-    left: 9%; /* Moves the image to the right */
-}
-
-/* Right Flexbox (50% Width) */
-.right-half-width {
-    flex: 1;
-    height: 100%;
-    background-color: transparent;
-    position: relative;
-}
-
-/* Model Image */
-.right-banner-image {
-    position: absolute; /* Allows top, right adjustments */
-    width: auto;
-    height: 41.5rem; /* Fixed height for consistency */
-    top: 0%; /* Adjusts vertical position */
-    right: 0%; /* Moves image to the left slightly */
-}
-
-/* Right-side decorative images */
-.decor-image {
-    position: absolute; /* Allows precise positioning */
-    width: auto;
+.banner-image {
+    width: 100%;
+    max-width: 1400px;
     height: auto;
-    max-width: 100%;
 }
 
-/* Individual Element Positions */
+/* Main Content (Top Layer) */
+.banner-content {
+    position: relative;
+    z-index: 2; /* Highest Layer */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 90%;
+    max-width: 1400px;
+    align-items: center;
+    gap: 2rem;
+}
+
+/* Left Content */
+.banner-left {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align to the top */
+}
+
+.heading-image {
+    width: 75%;
+    max-width: 500px;
+    margin-top: 6vh; /* Moves it downward */
+}
+
+/* Right Content */
+.banner-right {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+}
+
+.model-image {
+    width: 110%; /* Bigger than container */
+    max-width: 550px;
+    object-fit: contain;
+    position: relative;
+    top: -16vh; /* Makes it start from the very top */
+}
+
+/* Decorative Images */
+.decor-image {
+    position: absolute;
+    width: clamp(60px, 8vw, 120px); /* Fluid size */
+}
+
 .decor-1 {
-    width: 8vw; /* Relative to screen size */
-    max-width: 120px;
-    top: 15%;
-    right: 8%;
+    top: 10%;
+    right: 5%;
 }
 
 .decor-2 {
-    width: 9vw; /* Relative to screen size */
-    bottom: 20%;
-    right: 93%;
+    bottom: 15%;
+    left: 5%;
 }
 
+/* RESPONSIVENESS */
+@media (max-width: 900px) {
+    .banner-content {
+        grid-template-columns: 1fr; /* Stacks content */
+        text-align: center;
+    }
+
+    .banner-left, .banner-right {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .heading-image {
+        width: 80%;
+        margin-top: 4vh; /* Adjusted */
+    }
+
+    .model-image {
+        width: 90%;
+        max-width: 450px;
+        top: -3vh; /* Slight adjustment */
+    }
+}
+
+@media (max-width: 600px) {
+    .banner-image {
+        width: 90%;
+    }
+
+    .heading-image {
+        width: 85%;
+        margin-top: 3vh; /* Further adjustment */
+    }
+
+    .model-image {
+        width: 100%;
+        max-width: 400px;
+        top: -2vh; /* Minor tweak */
+    }
+}
 
 /* Container for the entire section */
 .choose-us-section {
