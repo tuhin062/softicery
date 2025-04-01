@@ -217,13 +217,20 @@ body {
     box-sizing: border-box;
 }
 
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* Banner Section (Main Canvas) */
 .banner-section {
     width: 100vw;
     min-height: 100vh;
     background-color: #ED2E64;
     display: flex;
-    align-items: flex-start; /* Align everything to the top of the section */
+    align-items: flex-start;
     justify-content: center;
     position: relative;
     overflow: hidden;
@@ -231,31 +238,32 @@ body {
 
 /* Background Image Layer (Middle Layer) */
 .banner-bg {
-    width: 90%;
-	height: 38%;
+    width: 100%;
+    height: 35vh; /* Adjusted to make the background image scale better on larger screens */
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 1; /* Below the main content */
+    z-index: 1;
     display: flex;
     justify-content: center;
 }
 
 .banner-image {
     width: 100%;
-    max-width: 1600px; /* Increased size for bigger screens */
+    max-width: 1600px; /* Ensures the image doesn't get too big */
     height: auto;
 }
 
 /* Main Content (Top Layer) */
 .banner-content {
     position: relative;
-    z-index: 2; /* Highest Layer */
+    z-index: 2;
     display: grid;
-    grid-template-columns: 40% 60%; /* Set widths of left and right content */
+    grid-template-columns: 40% 60%; /* Left takes 40% and right takes 60% of the space */
     width: 100%;
-    max-width: 1400px; /* Ensures content doesn't exceed this width */
+    max-width: 1400px;
     gap: 2rem;
+    padding: 0 3%; /* Adds padding to the content */
 }
 
 /* Left Content (40% Width) */
@@ -266,8 +274,8 @@ body {
 }
 
 .heading-image {
-	margin-top: 200px;
-    width: 75%;
+    margin-top: 15vh; /* Adds space at the top for larger screens */
+    width: 80%; /* Makes the heading image responsive */
     max-width: 500px;
 }
 
@@ -282,8 +290,9 @@ body {
 
 .model-image {
     width: 100%;
-    max-width: 785px; /* Increased size of the model image to fill the new 60% width */
-    object-fit: contain; /* Ensures the image maintains its aspect ratio */
+    max-width: 800px; /* Allows the image to grow dynamically */
+    height: auto;
+    object-fit: contain; /* Ensures the image keeps its aspect ratio */
 }
 
 /* Decorative Images */
