@@ -305,7 +305,7 @@ body {
 /* ===================== */
 /* RESPONSIVE STYLES FOR SCREENS >1500px */
 /* ===================== */
-@media screen and (min-width: 1700px) {
+@media screen and (min-width: 1878px) {
 	    /* Background Image Layer (Middle Layer) */
 		.banner-bg {
 			width: 90%; /* Slightly increase width for better fit */
