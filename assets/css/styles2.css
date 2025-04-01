@@ -210,6 +210,13 @@ body {
 
 
 
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* Banner Section (Main Canvas) */
 .banner-section {
     width: 100vw;
@@ -224,7 +231,8 @@ body {
 
 /* Background Image Layer (Middle Layer) */
 .banner-bg {
-    width: 100%;
+    width: 90%;
+	height: 38%;
     position: absolute;
     top: 0;
     left: 0;
@@ -244,38 +252,38 @@ body {
     position: relative;
     z-index: 2; /* Highest Layer */
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 90%;
-    max-width: 1400px;
+    grid-template-columns: 40% 60%; /* Set widths of left and right content */
+    width: 100%;
+    max-width: 1400px; /* Ensures content doesn't exceed this width */
     gap: 2rem;
-    padding-top: 0; /* Remove any extra gap */
 }
 
-/* Left Content */
+/* Left Content (40% Width) */
 .banner-left {
     display: flex;
     justify-content: center;
-	align-items: center;
+    align-items: flex-start; /* Align content to the top */
 }
 
 .heading-image {
-    width: 50%;
+	margin-top: 200px;
+    width: 75%;
     max-width: 500px;
 }
 
-/* Right Content */
+/* Right Content (60% Width) */
 .banner-right {
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Aligns content to the top */
+    align-items: flex-start; /* Align content to the top */
     position: relative;
     height: 100%;
 }
 
 .model-image {
     width: 100%;
-    max-width: 700px; /* Increased max size for the model */
-    object-fit: contain;
+    max-width: 785px; /* Increased size of the model image to fill the new 60% width */
+    object-fit: contain; /* Ensures the image maintains its aspect ratio */
 }
 
 /* Decorative Images */
@@ -293,6 +301,7 @@ body {
     bottom: 15%;
     left: 5%;
 }
+
 
 
 
