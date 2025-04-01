@@ -217,20 +217,13 @@ body {
     box-sizing: border-box;
 }
 
-/* Global Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 /* Banner Section (Main Canvas) */
 .banner-section {
     width: 100vw;
     min-height: 100vh;
     background-color: #ED2E64;
     display: flex;
-    align-items: flex-start;
+    align-items: flex-start; /* Align everything to the top of the section */
     justify-content: center;
     position: relative;
     overflow: hidden;
@@ -238,32 +231,31 @@ body {
 
 /* Background Image Layer (Middle Layer) */
 .banner-bg {
-    width: 100%;
-    height: 35vh; /* Adjusted to make the background image scale better on larger screens */
+    width: 90%;
+    height: 38%;
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: 1; /* Below the main content */
     display: flex;
     justify-content: center;
 }
 
 .banner-image {
     width: 100%;
-    max-width: 1600px; /* Ensures the image doesn't get too big */
+    max-width: 1600px;
     height: auto;
 }
 
 /* Main Content (Top Layer) */
 .banner-content {
     position: relative;
-    z-index: 2;
+    z-index: 2; /* Highest Layer */
     display: grid;
-    grid-template-columns: 40% 60%; /* Left takes 40% and right takes 60% of the space */
+    grid-template-columns: 40% 60%;
     width: 100%;
     max-width: 1400px;
     gap: 2rem;
-    padding: 0 3%; /* Adds padding to the content */
 }
 
 /* Left Content (40% Width) */
@@ -274,8 +266,8 @@ body {
 }
 
 .heading-image {
-    margin-top: 15vh; /* Adds space at the top for larger screens */
-    width: 80%; /* Makes the heading image responsive */
+    margin-top: 200px;
+    width: 75%;
     max-width: 500px;
 }
 
@@ -283,16 +275,15 @@ body {
 .banner-right {
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Align content to the top */
+    align-items: flex-start;
     position: relative;
     height: 100%;
 }
 
 .model-image {
     width: 100%;
-    max-width: 800px; /* Allows the image to grow dynamically */
-    height: auto;
-    object-fit: contain; /* Ensures the image keeps its aspect ratio */
+    max-width: 785px;
+    object-fit: contain;
 }
 
 /* Decorative Images */
@@ -311,7 +302,46 @@ body {
     left: 5%;
 }
 
+/* ===================== */
+/* RESPONSIVE STYLES FOR SCREENS >1500px */
+/* ===================== */
+@media screen and (min-width: 1600px) {
+	    /* Background Image Layer (Middle Layer) */
+		.banner-bg {
+			width: 90%; /* Slightly increase width for better fit */
+			height: 40%; /* Increase height to adjust visual balance */
+		}
+	
+		.banner-image {
+			max-width: 1800px; /* Increase max width for large screens */
+			height: auto; /* Ensures it scales proportionally */
+		}
 
+    .banner-content {
+        max-width: 1600px; /* Expands content width */
+        gap: 3rem; /* Increases spacing */
+    }
+
+    .heading-image {
+        margin-top: 235px; /* Slightly lowers text */
+        width: 100%;
+        max-width: 540px; /* Makes the heading image larger */
+    }
+
+    .model-image {
+        max-width: 950px; /* Makes the model image larger */
+    }
+
+    .decor-1 {
+        top: 14%;
+        right: 11%;
+    }
+
+    .decor-2 {
+        bottom: 10%;
+        left: 9%;
+    }
+}
 
 
 /* Container for the entire section */
@@ -1556,6 +1586,7 @@ section {
 		color: #FFF7F7;
 		font-size: 1.8rem;
 	}
+
 
 	.choose-us-section {
 		padding: 80px 20px 40px 20px;
