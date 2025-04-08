@@ -1,50 +1,32 @@
 document.addEventListener("DOMContentLoaded", function () {
     gsap.registerPlugin(ScrollTrigger);
 
-    // Detect mobile devices (you can also use CSS media queries in JS)
-    const isMobile = window.matchMedia("(max-width: 767px)").matches;
-
     // Enhanced interactive animation for heading image
     gsap.from("#uniqueImageContainer", {
         opacity: 0,
         scale: 0.8,
-        rotationX: isMobile ? 0 : -30, // Simpler animation on mobile
-        y: isMobile ? 40 : 80, // Smaller movement on mobile
+        rotationX: -30,
+        y: 80,
         duration: 1.5,
         ease: "power3.out",
         scrollTrigger: {
             trigger: "#uniqueImageContainer",
-            start: isMobile ? "top 85%" : "top 95%", // Earlier trigger on mobile
-            end: isMobile ? "+=200" : "+=300", // Shorter scroll distance on mobile
-            toggleActions: "play none none reverse",
-            markers: false // Set to true for debugging, then false for production
+            start: "top 95%",
+            toggleActions: "play none none reverse"
         }
     });
 
     // Animate the flavour cards sequentially
     gsap.from(".signature-flavour-card", {
         opacity: 0,
-        y: isMobile ? 30 : 50, // Smaller movement on mobile
+        y: 50,
         duration: 1,
-        stagger: isMobile ? 0.2 : 0.3, // Faster stagger on mobile
+        stagger: 0.3,
         ease: "power3.out",
         scrollTrigger: {
             trigger: ".signature-flavour-wrapper",
-            start: isMobile ? "top 75%" : "top 80%", // Earlier trigger on mobile
-            end: isMobile ? "+=300" : "+=400", // Shorter scroll distance
-            toggleActions: "play none none reverse",
-            markers: false // For debugging
+            start: "top 80%",
+            toggleActions: "play none none reverse"
         }
     });
-
-    // Mobile-specific fixes
-    if (isMobile) {
-        // Refresh ScrollTrigger on mobile orientation changes
-        window.addEventListener("orientationchange", () => ScrollTrigger.refresh());
-        
-        // Add a small delay before refreshing to account for orientation change
-        window.addEventListener("resize", () => {
-            setTimeout(ScrollTrigger.refresh, 500);
-        });
-    }
 });
