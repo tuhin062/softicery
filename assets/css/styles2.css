@@ -342,6 +342,95 @@ body {
         left: 9%;
     }
 }
+/* ===================== */
+/* MOBILE RESPONSIVE STYLES (Default: Screens < 768px) */
+/* ===================== */
+@media screen and (max-width: 767px) {
+	/* Banner Section Adjustments */
+	.banner-section {
+	  min-height: auto; /* Remove fixed height */
+	  padding-bottom: 2rem; /* Add space at bottom */
+	  align-items: center; /* Center content vertically */
+	}
+  
+	/* Background Image (White Curve) */
+	.banner-bg {
+	  width: 100% !important; /* Full width */
+	  height: 25% !important; /* Reduce height */
+	  top: 0;
+	  left: 0;
+	}
+  
+	/* Main Content Layout */
+	.banner-content {
+	  grid-template-columns: 1fr !important; /* Single column */
+	  gap: 1rem !important;
+	  padding: 0 1rem; /* Add side padding */
+	  align-items: center;
+	}
+  
+	/* Left Content (Heading Text) */
+	.banner-left {
+	  order: 2; /* Move below the model image */
+	  margin-top: -50px; /* Overlap with model */
+	}
+  
+	.heading-image {
+		margin-top: 55px !important;
+        width: 73% !important;
+        max-width: 300px !important;
+	}
+  
+	/* Right Content (Model + Decorations) */
+	.banner-right {
+	  order: 1; /* Move to top */
+	}
+  
+	.model-image {
+		width: 137% !important;      /* Increase width */
+		max-width: none !important;  /* Remove max-width restriction */
+		position: relative;          /* Enable positioning */
+		left: 4%;  
+	}
+  
+	/* Decorations (Ice Cubes) */
+	.decor-image {
+	  width: 85px !important; /* Smaller size */
+	}
+  
+	.decor-1 {
+	  top: 79% !important;
+	  right: 10% !important;
+	}
+  
+	.decor-2 {
+	  bottom: -46% !important;
+	  left: -3% !important;
+	}
+  }
+  
+  /* ===================== */
+  /* TABLET RESPONSIVE STYLES (768px - 1024px) */
+  /* ===================== */
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+	.banner-content {
+	  grid-template-columns: 1fr 1fr !important; /* Equal columns */
+	  max-width: 90% !important;
+	}
+  
+	.heading-image {
+	  margin-top: 150px !important;
+	  width: 90% !important;
+	}
+  
+	.model-image {
+	  max-width: 100% !important;
+	}
+  
+	.decor-image {
+	  width: 50px !important;
+	}
+  }
 
 
 /* Container for the entire section */
