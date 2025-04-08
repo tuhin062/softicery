@@ -1,12 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Check if mobile device (adjust breakpoint as needed)
+    // Check if screen is mobile (using 767px as breakpoint)
     const isMobile = window.matchMedia("(max-width: 767px)").matches;
     
-    // Only initialize GSAP if NOT mobile
+    // Only run GSAP if NOT mobile
     if (!isMobile) {
         gsap.registerPlugin(ScrollTrigger);
 
-        // Enhanced interactive animation for heading image (Desktop only)
+        // Enhanced interactive animation for heading image
         gsap.from("#uniqueImageContainer", {
             opacity: 0,
             scale: 0.8,
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
 
-        // Animate the flavour cards sequentially (Desktop only)
+        // Animate the flavour cards sequentially
         gsap.from(".signature-flavour-card", {
             opacity: 0,
             y: 50,
@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     } else {
-        // Mobile fallback: Ensure elements are visible immediately
+        // Mobile fallback: Immediately show all elements
         gsap.set(["#uniqueImageContainer", ".signature-flavour-card"], {
             opacity: 1,
             y: 0
