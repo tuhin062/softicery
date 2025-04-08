@@ -6,19 +6,6 @@ document.addEventListener("DOMContentLoaded", function () {
   if (!isMobile) {
       gsap.registerPlugin(ScrollTrigger);
 
-      // 🌊 Bottom SVG Wave Animation (Subtle Movement)
-      gsap.to(".signature-svg-bottom path", {
-          y: 5,
-          duration: 3,
-          ease: "power1.inOut",
-          scrollTrigger: {
-              trigger: ".signature-svg-bottom",
-              start: "top bottom",
-              end: "bottom top",
-              scrub: true,
-          },
-      });
-
       // 🍦 Flavour Showcase Title Image Animation
       gsap.from(".custom-image-container img", {
           opacity: 0,
@@ -33,6 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
           },
       });
 
+      // 🎥 Video Container Animation
       gsap.from(".flavour-video-container", {
           opacity: 0, 
           scale: 0.85,  
@@ -121,14 +109,12 @@ document.addEventListener("DOMContentLoaded", function () {
   } else {
       // Mobile fallback: Immediately show all animated elements
       gsap.set([
-          ".signature-svg-bottom path",
           ".custom-image-container img",
           ".flavour-video-container",
           ".flavour-gradient-background",
           ".custom-image-container-testimonial img",
           ".testimonial",
-          ".slider-img img",
-          ".testimonial-section + svg path"
+          ".slider-img img"
       ], {
           opacity: 1,
           x: 0,
